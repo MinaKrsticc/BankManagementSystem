@@ -2,7 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
-
+#include <string.h>
 #include "CurrentAccount.h"
 
 using namespace std;
@@ -31,10 +31,12 @@ namespace my_Account
         }
     }
     
-    CurrentAccount::CurrentAccount(Data creationData, char* nameUser, char* adressUser, int amountMoney, int limitUsersMoney)
+    CurrentAccount::CurrentAccount(Data creationData, char* nameUser, char* adressUser, float amountMoney, int limitUsersMoney)
     {
-        this->adress = adressUser;
-        this->name = nameUser;
+        strcpy(this->adress, adressUser);
+        strcpy(this->name, nameUser);
+        //this->adress = adressUser;
+        //this->name = nameUser;
         this->limitMoney = limitUsersMoney;
         this->availableFunds = amountMoney;
         this->dataTime.days = creationData.days;
@@ -42,13 +44,13 @@ namespace my_Account
         this->dataTime.year = creationData.year;
     }
 
-    int CurrentAccount::Deposit(int amountMoney) 
+    float CurrentAccount::Deposit(float amountMoney) 
     {
         this->availableFunds = this->availableFunds + amountMoney;
         return this->availableFunds;
     }
 
-    int CurrentAccount::Withdraw(int amountMoney)  // amoundMoney je kolicina novca koja se podize , funkcija vraca koliko je novca ostalo posle podizanja novca
+    float CurrentAccount::Withdraw(float amountMoney)  // amoundMoney je kolicina novca koja se podize , funkcija vraca koliko je novca ostalo posle podizanja novca
     {
         if (this->availableFunds > amountMoney)
         {

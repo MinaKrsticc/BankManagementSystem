@@ -127,6 +127,20 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+src/BankManagementSystem/CMakeFiles/Bank.dir/rule:
+	cd /home/syrmia/BankManagementSystem /build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/BankManagementSystem/CMakeFiles/Bank.dir/rule
+.PHONY : src/BankManagementSystem/CMakeFiles/Bank.dir/rule
+
+# Convenience name for target.
+Bank: src/BankManagementSystem/CMakeFiles/Bank.dir/rule
+.PHONY : Bank
+
+# fast build rule for target.
+Bank/fast:
+	cd /home/syrmia/BankManagementSystem /build && $(MAKE) $(MAKESILENT) -f src/BankManagementSystem/CMakeFiles/Bank.dir/build.make src/BankManagementSystem/CMakeFiles/Bank.dir/build
+.PHONY : Bank/fast
+
+# Convenience name for target.
 src/BankManagementSystem/CMakeFiles/TrustAccount.dir/rule:
 	cd /home/syrmia/BankManagementSystem /build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/BankManagementSystem/CMakeFiles/TrustAccount.dir/rule
 .PHONY : src/BankManagementSystem/CMakeFiles/TrustAccount.dir/rule
@@ -139,48 +153,6 @@ TrustAccount: src/BankManagementSystem/CMakeFiles/TrustAccount.dir/rule
 TrustAccount/fast:
 	cd /home/syrmia/BankManagementSystem /build && $(MAKE) $(MAKESILENT) -f src/BankManagementSystem/CMakeFiles/TrustAccount.dir/build.make src/BankManagementSystem/CMakeFiles/TrustAccount.dir/build
 .PHONY : TrustAccount/fast
-
-# Convenience name for target.
-src/BankManagementSystem/CMakeFiles/main.dir/rule:
-	cd /home/syrmia/BankManagementSystem /build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/BankManagementSystem/CMakeFiles/main.dir/rule
-.PHONY : src/BankManagementSystem/CMakeFiles/main.dir/rule
-
-# Convenience name for target.
-main: src/BankManagementSystem/CMakeFiles/main.dir/rule
-.PHONY : main
-
-# fast build rule for target.
-main/fast:
-	cd /home/syrmia/BankManagementSystem /build && $(MAKE) $(MAKESILENT) -f src/BankManagementSystem/CMakeFiles/main.dir/build.make src/BankManagementSystem/CMakeFiles/main.dir/build
-.PHONY : main/fast
-
-# Convenience name for target.
-src/BankManagementSystem/CMakeFiles/SavingsAccount.dir/rule:
-	cd /home/syrmia/BankManagementSystem /build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/BankManagementSystem/CMakeFiles/SavingsAccount.dir/rule
-.PHONY : src/BankManagementSystem/CMakeFiles/SavingsAccount.dir/rule
-
-# Convenience name for target.
-SavingsAccount: src/BankManagementSystem/CMakeFiles/SavingsAccount.dir/rule
-.PHONY : SavingsAccount
-
-# fast build rule for target.
-SavingsAccount/fast:
-	cd /home/syrmia/BankManagementSystem /build && $(MAKE) $(MAKESILENT) -f src/BankManagementSystem/CMakeFiles/SavingsAccount.dir/build.make src/BankManagementSystem/CMakeFiles/SavingsAccount.dir/build
-.PHONY : SavingsAccount/fast
-
-# Convenience name for target.
-src/BankManagementSystem/CMakeFiles/bank.dir/rule:
-	cd /home/syrmia/BankManagementSystem /build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/BankManagementSystem/CMakeFiles/bank.dir/rule
-.PHONY : src/BankManagementSystem/CMakeFiles/bank.dir/rule
-
-# Convenience name for target.
-bank: src/BankManagementSystem/CMakeFiles/bank.dir/rule
-.PHONY : bank
-
-# fast build rule for target.
-bank/fast:
-	cd /home/syrmia/BankManagementSystem /build && $(MAKE) $(MAKESILENT) -f src/BankManagementSystem/CMakeFiles/bank.dir/build.make src/BankManagementSystem/CMakeFiles/bank.dir/build
-.PHONY : bank/fast
 
 # Convenience name for target.
 src/BankManagementSystem/CMakeFiles/CurrentAccount.dir/rule:
@@ -210,12 +182,40 @@ CreditCardAccount/fast:
 	cd /home/syrmia/BankManagementSystem /build && $(MAKE) $(MAKESILENT) -f src/BankManagementSystem/CMakeFiles/CreditCardAccount.dir/build.make src/BankManagementSystem/CMakeFiles/CreditCardAccount.dir/build
 .PHONY : CreditCardAccount/fast
 
+# Convenience name for target.
+src/BankManagementSystem/CMakeFiles/main.dir/rule:
+	cd /home/syrmia/BankManagementSystem /build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/BankManagementSystem/CMakeFiles/main.dir/rule
+.PHONY : src/BankManagementSystem/CMakeFiles/main.dir/rule
+
+# Convenience name for target.
+main: src/BankManagementSystem/CMakeFiles/main.dir/rule
+.PHONY : main
+
+# fast build rule for target.
+main/fast:
+	cd /home/syrmia/BankManagementSystem /build && $(MAKE) $(MAKESILENT) -f src/BankManagementSystem/CMakeFiles/main.dir/build.make src/BankManagementSystem/CMakeFiles/main.dir/build
+.PHONY : main/fast
+
+# Convenience name for target.
+src/BankManagementSystem/CMakeFiles/SavingsAccount.dir/rule:
+	cd /home/syrmia/BankManagementSystem /build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/BankManagementSystem/CMakeFiles/SavingsAccount.dir/rule
+.PHONY : src/BankManagementSystem/CMakeFiles/SavingsAccount.dir/rule
+
+# Convenience name for target.
+SavingsAccount: src/BankManagementSystem/CMakeFiles/SavingsAccount.dir/rule
+.PHONY : SavingsAccount
+
+# fast build rule for target.
+SavingsAccount/fast:
+	cd /home/syrmia/BankManagementSystem /build && $(MAKE) $(MAKESILENT) -f src/BankManagementSystem/CMakeFiles/SavingsAccount.dir/build.make src/BankManagementSystem/CMakeFiles/SavingsAccount.dir/build
+.PHONY : SavingsAccount/fast
+
 Bank.o: Bank.cpp.o
 .PHONY : Bank.o
 
 # target to build an object file
 Bank.cpp.o:
-	cd /home/syrmia/BankManagementSystem /build && $(MAKE) $(MAKESILENT) -f src/BankManagementSystem/CMakeFiles/bank.dir/build.make src/BankManagementSystem/CMakeFiles/bank.dir/Bank.cpp.o
+	cd /home/syrmia/BankManagementSystem /build && $(MAKE) $(MAKESILENT) -f src/BankManagementSystem/CMakeFiles/Bank.dir/build.make src/BankManagementSystem/CMakeFiles/Bank.dir/Bank.cpp.o
 .PHONY : Bank.cpp.o
 
 Bank.i: Bank.cpp.i
@@ -223,7 +223,7 @@ Bank.i: Bank.cpp.i
 
 # target to preprocess a source file
 Bank.cpp.i:
-	cd /home/syrmia/BankManagementSystem /build && $(MAKE) $(MAKESILENT) -f src/BankManagementSystem/CMakeFiles/bank.dir/build.make src/BankManagementSystem/CMakeFiles/bank.dir/Bank.cpp.i
+	cd /home/syrmia/BankManagementSystem /build && $(MAKE) $(MAKESILENT) -f src/BankManagementSystem/CMakeFiles/Bank.dir/build.make src/BankManagementSystem/CMakeFiles/Bank.dir/Bank.cpp.i
 .PHONY : Bank.cpp.i
 
 Bank.s: Bank.cpp.s
@@ -231,7 +231,7 @@ Bank.s: Bank.cpp.s
 
 # target to generate assembly for a file
 Bank.cpp.s:
-	cd /home/syrmia/BankManagementSystem /build && $(MAKE) $(MAKESILENT) -f src/BankManagementSystem/CMakeFiles/bank.dir/build.make src/BankManagementSystem/CMakeFiles/bank.dir/Bank.cpp.s
+	cd /home/syrmia/BankManagementSystem /build && $(MAKE) $(MAKESILENT) -f src/BankManagementSystem/CMakeFiles/Bank.dir/build.make src/BankManagementSystem/CMakeFiles/Bank.dir/Bank.cpp.s
 .PHONY : Bank.cpp.s
 
 CreditCardAccount.o: CreditCardAccount.cpp.o
@@ -363,11 +363,11 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... Bank"
 	@echo "... CreditCardAccount"
 	@echo "... CurrentAccount"
 	@echo "... SavingsAccount"
 	@echo "... TrustAccount"
-	@echo "... bank"
 	@echo "... main"
 	@echo "... Bank.o"
 	@echo "... Bank.i"

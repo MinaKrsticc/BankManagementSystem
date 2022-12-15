@@ -92,6 +92,7 @@ main_EXTERNAL_OBJECTS =
 
 ../bin/main: src/BankManagementSystem/CMakeFiles/main.dir/main.cpp.o
 ../bin/main: src/BankManagementSystem/CMakeFiles/main.dir/build.make
+../bin/main: ../lib/libBank.a
 ../bin/main: ../lib/libCreditCardAccount.a
 ../bin/main: ../lib/libCurrentAccount.a
 ../bin/main: ../lib/libSavingsAccount.a

@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../lib/libBank.a CMakeFiles/Bank.dir/Bank.cpp.o
+/usr/bin/ranlib ../../../lib/libBank.a

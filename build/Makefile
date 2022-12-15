@@ -127,6 +127,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named Bank
+
+# Build rule for target.
+Bank: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Bank
+.PHONY : Bank
+
+# fast build rule for target.
+Bank/fast:
+	$(MAKE) $(MAKESILENT) -f src/BankManagementSystem/CMakeFiles/Bank.dir/build.make src/BankManagementSystem/CMakeFiles/Bank.dir/build
+.PHONY : Bank/fast
+
+#=============================================================================
 # Target rules for targets named TrustAccount
 
 # Build rule for target.
@@ -138,45 +151,6 @@ TrustAccount: cmake_check_build_system
 TrustAccount/fast:
 	$(MAKE) $(MAKESILENT) -f src/BankManagementSystem/CMakeFiles/TrustAccount.dir/build.make src/BankManagementSystem/CMakeFiles/TrustAccount.dir/build
 .PHONY : TrustAccount/fast
-
-#=============================================================================
-# Target rules for targets named main
-
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
-
-# fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f src/BankManagementSystem/CMakeFiles/main.dir/build.make src/BankManagementSystem/CMakeFiles/main.dir/build
-.PHONY : main/fast
-
-#=============================================================================
-# Target rules for targets named SavingsAccount
-
-# Build rule for target.
-SavingsAccount: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SavingsAccount
-.PHONY : SavingsAccount
-
-# fast build rule for target.
-SavingsAccount/fast:
-	$(MAKE) $(MAKESILENT) -f src/BankManagementSystem/CMakeFiles/SavingsAccount.dir/build.make src/BankManagementSystem/CMakeFiles/SavingsAccount.dir/build
-.PHONY : SavingsAccount/fast
-
-#=============================================================================
-# Target rules for targets named bank
-
-# Build rule for target.
-bank: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bank
-.PHONY : bank
-
-# fast build rule for target.
-bank/fast:
-	$(MAKE) $(MAKESILENT) -f src/BankManagementSystem/CMakeFiles/bank.dir/build.make src/BankManagementSystem/CMakeFiles/bank.dir/build
-.PHONY : bank/fast
 
 #=============================================================================
 # Target rules for targets named CurrentAccount
@@ -204,6 +178,32 @@ CreditCardAccount/fast:
 	$(MAKE) $(MAKESILENT) -f src/BankManagementSystem/CMakeFiles/CreditCardAccount.dir/build.make src/BankManagementSystem/CMakeFiles/CreditCardAccount.dir/build
 .PHONY : CreditCardAccount/fast
 
+#=============================================================================
+# Target rules for targets named main
+
+# Build rule for target.
+main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
+.PHONY : main
+
+# fast build rule for target.
+main/fast:
+	$(MAKE) $(MAKESILENT) -f src/BankManagementSystem/CMakeFiles/main.dir/build.make src/BankManagementSystem/CMakeFiles/main.dir/build
+.PHONY : main/fast
+
+#=============================================================================
+# Target rules for targets named SavingsAccount
+
+# Build rule for target.
+SavingsAccount: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SavingsAccount
+.PHONY : SavingsAccount
+
+# fast build rule for target.
+SavingsAccount/fast:
+	$(MAKE) $(MAKESILENT) -f src/BankManagementSystem/CMakeFiles/SavingsAccount.dir/build.make src/BankManagementSystem/CMakeFiles/SavingsAccount.dir/build
+.PHONY : SavingsAccount/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -213,11 +213,11 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... Bank"
 	@echo "... CreditCardAccount"
 	@echo "... CurrentAccount"
 	@echo "... SavingsAccount"
 	@echo "... TrustAccount"
-	@echo "... bank"
 	@echo "... main"
 .PHONY : help
 

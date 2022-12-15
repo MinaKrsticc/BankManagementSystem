@@ -12,12 +12,10 @@ namespace my_Account
 
         public:
             CreditCardAccount();
-            CreditCardAccount(Data creationData, char* nameUser, char* adressUser, int amountMoney, int allowedMinus, int limitUsersMoney);
+            CreditCardAccount(Data creationData, char* nameUser, char* adressUser, float amountMoney, int allowedMinus, int limitUsersMoney);
             ~CreditCardAccount();
-            int Deposit(int amountMoney) override;
-            int Withdraw(int amountMoney) override;
-            friend ostream& operator<< (ostream& os, const CreditCardAccount& acc);
-
+            float Deposit(float amountMoney) override;
+            float Withdraw(float amountMoney) override;
             void Print() const override;
      };
 

@@ -36,7 +36,7 @@ namespace my_Account
         }
     }
 
-    SavingAccount::SavingAccount(Data creationData, char *userName, char *userAdress, int userAmountMoney, float userInterestRate, int userMinimumFunds)
+    SavingAccount::SavingAccount(Data creationData, char *userName, char *userAdress, float userAmountMoney, float userInterestRate, float userMinimumFunds)
     {
         this->adress = userAdress;
         this->name = userName;
@@ -55,12 +55,13 @@ namespace my_Account
              << "Kamata je  " << this->interestRate << endl;
     }
 
-    int SavingAccount::Deposit(int amountMoney)
+    float SavingAccount::Deposit(float amountMoney)
     {
-        this->availableFunds = int(this->availableFunds + amountMoney + (amountMoney * this->interestRate));
+        this->availableFunds = this->availableFunds + amountMoney + (amountMoney * this->interestRate);
+        return this->availableFunds;
     }
 
-    int SavingAccount::Withdraw(int amountMoney)
+    float SavingAccount::Withdraw(float amountMoney)
     {
         if (this->countWithdrawals > 0 && this->countWithdrawals <= 3)
         {

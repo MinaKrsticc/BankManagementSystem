@@ -5,16 +5,16 @@
 using namespace std;
 namespace my_Account
 {
-    class CurrentAccount : Account
+    class CurrentAccount : public Account
     {
         int limitMoney; //ogranicenje novca koji se moze podici
 
     public:
         CurrentAccount();
-        CurrentAccount(Data creationData, char* name, char* adress, int amountMoney, int limitUsersMoney);
+        CurrentAccount(Data creationData, char* name, char* adress, float amountMoney, int limitUsersMoney);
         ~CurrentAccount();
-        int Deposit(int amountMoney) override;
-        int Withdraw(int amountMoney) override;
+        float Deposit(float amountMoney) override;
+        float Withdraw(float amountMoney) override;
         void Print() const override;
     };
 

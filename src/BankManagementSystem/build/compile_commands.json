@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/syrmia/BankManagementSystem /src/BankManagementSystem/build",
+  "command": "/usr/bin/c++  -I/home/syrmia/BankManagementSystem /src/BankManagementSystem/src/BankManagementSystem -g -o CMakeFiles/TrustAccount.dir/TrustAccount.o -c /home/syrmia/BankManagementSystem /src/BankManagementSystem/TrustAccount.cpp",
+  "file": "/home/syrmia/BankManagementSystem /src/BankManagementSystem/TrustAccount.cpp"
+},
+{
+  "directory": "/home/syrmia/BankManagementSystem /src/BankManagementSystem/build",
+  "command": "/usr/bin/c++  -I/home/syrmia/BankManagementSystem /src/BankManagementSystem/src/BankManagementSystem -g -o CMakeFiles/CurrentAccount.dir/CurrentAccount.o -c /home/syrmia/BankManagementSystem /src/BankManagementSystem/CurrentAccount.cpp",
+  "file": "/home/syrmia/BankManagementSystem /src/BankManagementSystem/CurrentAccount.cpp"
+},
+{
+  "directory": "/home/syrmia/BankManagementSystem /src/BankManagementSystem/build",
+  "command": "/usr/bin/c++  -I/home/syrmia/BankManagementSystem /src/BankManagementSystem/src/BankManagementSystem -g -o CMakeFiles/CreditCardAccount.dir/CreditCardAccount.o -c /home/syrmia/BankManagementSystem /src/BankManagementSystem/CreditCardAccount.cpp",
+  "file": "/home/syrmia/BankManagementSystem /src/BankManagementSystem/CreditCardAccount.cpp"
+},
+{
+  "directory": "/home/syrmia/BankManagementSystem /src/BankManagementSystem/build",
+  "command": "/usr/bin/c++  -I/home/syrmia/BankManagementSystem /src/BankManagementSystem/src/BankManagementSystem -g -o CMakeFiles/SavingsAccount.dir/SavingAccount.o -c /home/syrmia/BankManagementSystem /src/BankManagementSystem/SavingAccount.cpp",
+  "file": "/home/syrmia/BankManagementSystem /src/BankManagementSystem/SavingAccount.cpp"
+},
+{
+  "directory": "/home/syrmia/BankManagementSystem /src/BankManagementSystem/build",
+  "command": "/usr/bin/c++  -I/home/syrmia/BankManagementSystem /src/BankManagementSystem/src/BankManagementSystem -g -o CMakeFiles/Bank.dir/Bank.o -c /home/syrmia/BankManagementSystem /src/BankManagementSystem/Bank.cpp",
+  "file": "/home/syrmia/BankManagementSystem /src/BankManagementSystem/Bank.cpp"
+},
+{
+  "directory": "/home/syrmia/BankManagementSystem /src/BankManagementSystem/build",
+  "command": "/usr/bin/c++  -I/home/syrmia/BankManagementSystem /src/BankManagementSystem/src/BankManagementSystem -g -o CMakeFiles/main.dir/main.o -c /home/syrmia/BankManagementSystem /src/BankManagementSystem/main.cpp",
+  "file": "/home/syrmia/BankManagementSystem /src/BankManagementSystem/main.cpp"
+}
+]

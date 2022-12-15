@@ -178,12 +178,23 @@ src/BankManagementSystem/CMakeFiles/main.dir/main.cpp.o: ../src/BankManagementSy
   /usr/include/c++/9/bits/ostream.tcc \
   /usr/include/c++/9/istream \
   /usr/include/c++/9/bits/istream.tcc \
+  ../src/BankManagementSystem/Bank.h \
   ../src/BankManagementSystem/Account.h \
   ../src/BankManagementSystem/CurrentAccount.h \
   ../src/BankManagementSystem/SavingAccount.h \
   ../src/BankManagementSystem/CreditCardAccount.h \
-  ../src/BankManagementSystem/TrustAccount.h
+  ../src/BankManagementSystem/TrustAccount.h \
+  /usr/include/c++/9/vector \
+  /usr/include/c++/9/bits/stl_construct.h \
+  /usr/include/c++/9/bits/stl_uninitialized.h \
+  /usr/include/c++/9/bits/stl_vector.h \
+  /usr/include/c++/9/bits/stl_bvector.h \
+  /usr/include/c++/9/bits/vector.tcc
 
+
+/usr/include/c++/9/bits/stl_vector.h:
+
+/usr/include/c++/9/vector:
 
 ../src/BankManagementSystem/TrustAccount.h:
 
@@ -355,6 +366,8 @@ src/BankManagementSystem/CMakeFiles/main.dir/main.cpp.o: ../src/BankManagementSy
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
+../src/BankManagementSystem/Bank.h:
+
 /usr/include/x86_64-linux-gnu/c++/9/bits/gthr-default.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
@@ -381,6 +394,8 @@ src/BankManagementSystem/CMakeFiles/main.dir/main.cpp.o: ../src/BankManagementSy
 
 /usr/include/c++/9/exception:
 
+/usr/include/c++/9/bits/stl_construct.h:
+
 /usr/include/c++/9/bits/localefwd.h:
 
 /usr/include/ctype.h:
@@ -396,6 +411,8 @@ src/BankManagementSystem/CMakeFiles/main.dir/main.cpp.o: ../src/BankManagementSy
 /usr/include/c++/9/iosfwd:
 
 /usr/include/pthread.h:
+
+/usr/include/c++/9/bits/vector.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
@@ -518,6 +535,10 @@ src/BankManagementSystem/CMakeFiles/main.dir/main.cpp.o: ../src/BankManagementSy
 /usr/include/x86_64-linux-gnu/bits/locale.h:
 
 /usr/include/c++/9/string:
+
+/usr/include/c++/9/bits/stl_bvector.h:
+
+/usr/include/c++/9/bits/stl_uninitialized.h:
 
 /usr/include/x86_64-linux-gnu/c++/9/bits/c++allocator.h:
 

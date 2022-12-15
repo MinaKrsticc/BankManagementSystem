@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -rdynamic CMakeFiles/main.dir/main.o -o main   -L/home/syrmia/BankManagementSystem /src/BankManagementSystem/.  -Wl,-rpath,/home/syrmia/BankManagementSystem /src/BankManagementSystem/. libBank.a libCreditCardAccount.a libCurrentAccount.a libSavingsAccount.a libTrustAccount.a 

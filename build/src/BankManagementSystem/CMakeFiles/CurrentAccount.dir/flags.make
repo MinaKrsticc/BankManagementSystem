@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/syrmia/BankManagementSystem /src
+CXX_INCLUDES = -I/home/syrmia/BankManagementSystem /src -I/home/syrmia/BankManagementSystem /src/BankManagementSystem
 
 CXX_FLAGS = -Wall -Wextra -fPIC -O3 -std=gnu++11
 

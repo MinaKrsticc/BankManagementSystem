@@ -14,7 +14,7 @@ namespace my_Account
         this->adress = nullptr;
         this->name = nullptr;
         this->availableFunds = 1000;
-        this->minimumFunds = this->availableFunds * 0,3;
+        this->minimumFunds = this->availableFunds * 0.3;
         this->dataTime.days = 1;
         this->dataTime.month = 1;
         this->dataTime.year = 2022;
@@ -22,7 +22,7 @@ namespace my_Account
 
     }
     
-    TrustAccount::TrustAccount(Data creationData, char* nameUser, char* adressUser, int amountMoney)
+    TrustAccount::TrustAccount(Data creationData, char* nameUser, char* adressUser, float amountMoney)
     {
         this->name = nameUser;
         this->adress = adressUser;
@@ -30,13 +30,12 @@ namespace my_Account
         this->dataTime.month = creationData.month;
         this->dataTime.days = creationData.days;
         this->availableFunds = amountMoney;
-        this->minimumFunds = this->availableFunds * 0,3;
+        this->minimumFunds = this->availableFunds * 0.3;
         this->countWithdrawals = 3;
 
     }
     TrustAccount::~TrustAccount()
     {
-            {
         if (this->name != nullptr || this->adress != nullptr)
         {
             delete this->name;
@@ -48,15 +47,14 @@ namespace my_Account
             this->countWithdrawals = 0;
         }
     }
-    }
 
-    int TrustAccount::Deposit(int amountMoney)
+    float TrustAccount::Deposit(float amountMoney)
     {
         this->availableFunds = this->availableFunds + amountMoney;
         return this->availableFunds;
     }
 
-    int TrustAccount::Withdraw(int amountMoney)//dopraviti ovu funkciju tj proveriti
+    float TrustAccount::Withdraw(float amountMoney)//dopraviti ovu funkciju tj proveriti
     {
         if (this->countWithdrawals > 0 && this->countWithdrawals <= 3)
         {

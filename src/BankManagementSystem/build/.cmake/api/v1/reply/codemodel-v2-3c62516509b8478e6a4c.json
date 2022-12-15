@@ -1,0 +1,100 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Project",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Bank::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Bank-Debug-7c1f80a4d61488aafe2e.json",
+					"name" : "Bank",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CreditCardAccount::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CreditCardAccount-Debug-00dd062d8d267b0cce0a.json",
+					"name" : "CreditCardAccount",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CurrentAccount::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CurrentAccount-Debug-3d7e4e31b814220f815f.json",
+					"name" : "CurrentAccount",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "SavingsAccount::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-SavingsAccount-Debug-25960fa0e7f09622d854.json",
+					"name" : "SavingsAccount",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "TrustAccount::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TrustAccount-Debug-5421a76b1d0762ce995e.json",
+					"name" : "TrustAccount",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main-Debug-0e649d2c4f8b2a95e85e.json",
+					"name" : "main",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/syrmia/BankManagementSystem /src/BankManagementSystem/build",
+		"source" : "/home/syrmia/BankManagementSystem /src/BankManagementSystem"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 2
+	}
+}

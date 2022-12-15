@@ -15,16 +15,22 @@ namespace my_Account
     protected:
         char *name;
         char *adress;
-        int availableFunds;
+        float availableFunds;
         Data dataTime;
 
     public:
-        Account();
-        virtual ~Account(){};
-        virtual int Deposit(int amountMoney);
-        virtual int Withdraw(int amountMoney);
-
+        virtual float Deposit(float amountMoney) = 0;
+        virtual float Withdraw(float amountMoney) = 0;
         virtual void Print() const;
+        Account() {};
+        // {name = nullptr;
+        // adress = nullptr;
+        // availableFunds = 1000;
+        // dataTime.days = 1;
+        // dataTime.month = 1;
+        // dataTime.year = 2023;};
+        ~Account() {};
+
         // friend ostream& operator<< (ostream& os, const Account& acc);
     };
 

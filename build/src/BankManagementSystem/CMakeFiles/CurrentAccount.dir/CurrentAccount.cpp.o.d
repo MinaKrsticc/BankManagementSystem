@@ -145,6 +145,9 @@ src/BankManagementSystem/CMakeFiles/CurrentAccount.dir/CurrentAccount.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/9/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++io.h \
  /usr/include/c++/9/bits/fstream.tcc /usr/include/c++/9/sstream \
- /usr/include/c++/9/bits/sstream.tcc \
+ /usr/include/c++/9/bits/sstream.tcc /usr/include/string.h \
+ /usr/include/strings.h \
+ /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+ /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
  /home/syrmia/BankManagementSystem /src/BankManagementSystem/CurrentAccount.h \
  /home/syrmia/BankManagementSystem /src/BankManagementSystem/Account.h

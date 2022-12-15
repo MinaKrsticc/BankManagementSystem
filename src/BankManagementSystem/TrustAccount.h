@@ -5,7 +5,7 @@
 using namespace std;
 namespace my_Account
 {
-    class TrustAccount : Account
+    class TrustAccount : public Account
     {
     private:
         int countWithdrawals;
@@ -14,12 +14,10 @@ namespace my_Account
     public:
         TrustAccount();
         ~TrustAccount();
-        int Deposit(int amountMoney) override;
-        int Withdraw(int amountMoney) override;
+        float Deposit(float amountMoney) override;
+        float Withdraw(float amountMoney) override;
         void Print() const override;
-        // ostream& operator<< (ostream& os, const Account& info);
-
-        TrustAccount(Data creationData, char* nameUser, char* adressUser, int amountMoney);
+        TrustAccount(Data creationData, char* nameUser, char* adressUser, float amountMoney);
 
     };
 

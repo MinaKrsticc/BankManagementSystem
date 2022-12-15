@@ -1,5 +1,5 @@
-#pragma once
 #include <iostream>
+#include <vector>
 #include "Bank.h"
 #include "Account.h"
 #include "CurrentAccount.h"
@@ -11,14 +11,30 @@ using namespace my_Account;
 
 Bank::Bank()
 {
-    CurrentAccount *currentAcc = new CurrentAccount();
+    Account *acc = new CurrentAccount();
+    this->accaunt = acc;
+}
+
+Bank::Bank(Account &accaunt)
+{
+    this->accaunt = &accaunt;
 }
 
 Bank::~Bank()
 {
-    if(this->acc != nullptr)
+    if(this->accaunt != nullptr)
     {
-        delete this->acc;
-        this->acc = nullptr;
+        delete this->accaunt;
+        this->accaunt = nullptr;
     }
+}
+
+void Bank::OpenAccount(Account &acc)
+{
+    this->accaunt = &acc;
+}
+
+void Bank::CloseAccount()
+{
+    this->accaunt = nullptr;
 }

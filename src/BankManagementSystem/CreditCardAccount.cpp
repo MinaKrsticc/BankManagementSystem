@@ -15,7 +15,7 @@ namespace my_Account
         this->dataTime.year = 2022;
     }
 
-    CreditCardAccount::CreditCardAccount(Data creationData, char *nameUser, char *adressUser, int amountMoney, int allowedMinus, int limitUsersMoney)
+    CreditCardAccount::CreditCardAccount(Data creationData, char *nameUser, char *adressUser, float amountMoney, int allowedMinus, int limitUsersMoney)
     {
         this->adress = adressUser;
         this->name = nameUser;
@@ -26,6 +26,7 @@ namespace my_Account
         this->dataTime.month = creationData.month;
         this->dataTime.year = creationData.year;
     }
+    
     CreditCardAccount::~CreditCardAccount()
     {
         if (this->name != nullptr || this->adress != nullptr)
@@ -44,13 +45,13 @@ namespace my_Account
         cout << this->name << " " << this->adress << " " << this->availableFunds << "  CreditCardAccount" << endl;
     }
 
-    int CreditCardAccount::Deposit(int amountMoney)
+    float CreditCardAccount::Deposit(float amountMoney)
     {
         this->availableFunds = this->availableFunds + amountMoney;
         return this->availableFunds;
     }
 
-    int CreditCardAccount::Withdraw(int amountMoney)
+    float CreditCardAccount::Withdraw(float amountMoney)
     {
         int restAccount = this->availableFunds - amountMoney;
 
