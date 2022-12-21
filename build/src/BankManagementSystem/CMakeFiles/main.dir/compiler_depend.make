@@ -178,29 +178,11 @@ src/BankManagementSystem/CMakeFiles/main.dir/main.cpp.o: ../src/BankManagementSy
   /usr/include/c++/9/bits/ostream.tcc \
   /usr/include/c++/9/istream \
   /usr/include/c++/9/bits/istream.tcc \
-  ../src/BankManagementSystem/Bank.h \
-  ../src/BankManagementSystem/Account.h \
-  ../src/BankManagementSystem/CurrentAccount.h \
-  ../src/BankManagementSystem/SavingAccount.h \
-  ../src/BankManagementSystem/CreditCardAccount.h \
-  ../src/BankManagementSystem/TrustAccount.h \
-  /usr/include/c++/9/vector \
-  /usr/include/c++/9/bits/stl_construct.h \
-  /usr/include/c++/9/bits/stl_uninitialized.h \
-  /usr/include/c++/9/bits/stl_vector.h \
-  /usr/include/c++/9/bits/stl_bvector.h \
-  /usr/include/c++/9/bits/vector.tcc
+  ../src/BankManagementSystem/my_Account/Account.h \
+  ../src/BankManagementSystem/my_Account/CurrentAccount.h
 
 
-/usr/include/c++/9/bits/stl_vector.h:
-
-/usr/include/c++/9/vector:
-
-../src/BankManagementSystem/TrustAccount.h:
-
-../src/BankManagementSystem/CreditCardAccount.h:
-
-../src/BankManagementSystem/Account.h:
+../src/BankManagementSystem/my_Account/Account.h:
 
 /usr/include/c++/9/istream:
 
@@ -296,8 +278,6 @@ src/BankManagementSystem/CMakeFiles/main.dir/main.cpp.o: ../src/BankManagementSy
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
-../src/BankManagementSystem/CurrentAccount.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/wchar2.h:
@@ -366,8 +346,6 @@ src/BankManagementSystem/CMakeFiles/main.dir/main.cpp.o: ../src/BankManagementSy
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
-../src/BankManagementSystem/Bank.h:
-
 /usr/include/x86_64-linux-gnu/c++/9/bits/gthr-default.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
@@ -394,8 +372,6 @@ src/BankManagementSystem/CMakeFiles/main.dir/main.cpp.o: ../src/BankManagementSy
 
 /usr/include/c++/9/exception:
 
-/usr/include/c++/9/bits/stl_construct.h:
-
 /usr/include/c++/9/bits/localefwd.h:
 
 /usr/include/ctype.h:
@@ -412,8 +388,6 @@ src/BankManagementSystem/CMakeFiles/main.dir/main.cpp.o: ../src/BankManagementSy
 
 /usr/include/pthread.h:
 
-/usr/include/c++/9/bits/vector.tcc:
-
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
 /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h:
@@ -425,6 +399,8 @@ src/BankManagementSystem/CMakeFiles/main.dir/main.cpp.o: ../src/BankManagementSy
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h:
+
+../src/BankManagementSystem/my_Account/CurrentAccount.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
@@ -496,8 +472,6 @@ src/BankManagementSystem/CMakeFiles/main.dir/main.cpp.o: ../src/BankManagementSy
 
 /usr/include/time.h:
 
-../src/BankManagementSystem/SavingAccount.h:
-
 /usr/include/c++/9/ext/string_conversions.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
@@ -535,10 +509,6 @@ src/BankManagementSystem/CMakeFiles/main.dir/main.cpp.o: ../src/BankManagementSy
 /usr/include/x86_64-linux-gnu/bits/locale.h:
 
 /usr/include/c++/9/string:
-
-/usr/include/c++/9/bits/stl_bvector.h:
-
-/usr/include/c++/9/bits/stl_uninitialized.h:
 
 /usr/include/x86_64-linux-gnu/c++/9/bits/c++allocator.h:
 

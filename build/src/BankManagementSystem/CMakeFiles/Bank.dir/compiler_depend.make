@@ -185,20 +185,20 @@ src/BankManagementSystem/CMakeFiles/Bank.dir/Bank.cpp.o: ../src/BankManagementSy
   /usr/include/c++/9/bits/stl_bvector.h \
   /usr/include/c++/9/bits/vector.tcc \
   ../src/BankManagementSystem/Bank.h \
-  ../src/BankManagementSystem/Account.h \
-  ../src/BankManagementSystem/CurrentAccount.h \
-  ../src/BankManagementSystem/SavingAccount.h \
-  ../src/BankManagementSystem/CreditCardAccount.h \
-  ../src/BankManagementSystem/TrustAccount.h
+  ../src/BankManagementSystem/my_Account/Account.h \
+  ../src/BankManagementSystem/my_Account/CurrentAccount.h \
+  ../src/BankManagementSystem/my_Account/SavingAccount.h \
+  ../src/BankManagementSystem/my_Account/CreditCardAccount.h \
+  ../src/BankManagementSystem/my_Account/TrustAccount.h
 
 
-../src/BankManagementSystem/TrustAccount.h:
+../src/BankManagementSystem/my_Account/CreditCardAccount.h:
 
-../src/BankManagementSystem/CreditCardAccount.h:
-
-../src/BankManagementSystem/Account.h:
+../src/BankManagementSystem/my_Account/Account.h:
 
 /usr/include/c++/9/bits/stl_vector.h:
+
+../src/BankManagementSystem/my_Account/TrustAccount.h:
 
 /usr/include/c++/9/vector:
 
@@ -303,8 +303,6 @@ src/BankManagementSystem/CMakeFiles/Bank.dir/Bank.cpp.o: ../src/BankManagementSy
 /usr/include/c++/9/bits/localefwd.h:
 
 /usr/include/ctype.h:
-
-../src/BankManagementSystem/CurrentAccount.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
@@ -426,6 +424,8 @@ src/BankManagementSystem/CMakeFiles/Bank.dir/Bank.cpp.o: ../src/BankManagementSy
 
 /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h:
 
+../src/BankManagementSystem/my_Account/CurrentAccount.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
@@ -496,8 +496,6 @@ src/BankManagementSystem/CMakeFiles/Bank.dir/Bank.cpp.o: ../src/BankManagementSy
 
 /usr/include/time.h:
 
-../src/BankManagementSystem/SavingAccount.h:
-
 /usr/include/c++/9/ext/string_conversions.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
@@ -565,6 +563,8 @@ src/BankManagementSystem/CMakeFiles/Bank.dir/Bank.cpp.o: ../src/BankManagementSy
 /usr/include/stdlib.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
+
+../src/BankManagementSystem/my_Account/SavingAccount.h:
 
 /usr/include/c++/9/bits/locale_facets.h:
 

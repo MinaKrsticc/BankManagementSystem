@@ -137,11 +137,11 @@ CMakeFiles/main.dir/main.o: \
  /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/istream \
  /usr/include/c++/9/bits/istream.tcc \
  /home/syrmia/BankManagementSystem /src/BankManagementSystem/Bank.h \
- /home/syrmia/BankManagementSystem /src/BankManagementSystem/Account.h \
- /home/syrmia/BankManagementSystem /src/BankManagementSystem/CurrentAccount.h \
- /home/syrmia/BankManagementSystem /src/BankManagementSystem/SavingAccount.h \
- /home/syrmia/BankManagementSystem /src/BankManagementSystem/CreditCardAccount.h \
- /home/syrmia/BankManagementSystem /src/BankManagementSystem/TrustAccount.h \
+ /home/syrmia/BankManagementSystem /src/BankManagementSystem/my_Account/Account.h \
+ /home/syrmia/BankManagementSystem /src/BankManagementSystem/my_Account/CurrentAccount.h \
+ /home/syrmia/BankManagementSystem /src/BankManagementSystem/my_Account/SavingAccount.h \
+ /home/syrmia/BankManagementSystem /src/BankManagementSystem/my_Account/CreditCardAccount.h \
+ /home/syrmia/BankManagementSystem /src/BankManagementSystem/my_Account/TrustAccount.h \
  /usr/include/c++/9/vector /usr/include/c++/9/bits/stl_construct.h \
  /usr/include/c++/9/bits/stl_uninitialized.h \
  /usr/include/c++/9/bits/stl_vector.h \

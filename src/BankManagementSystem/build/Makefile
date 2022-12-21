@@ -65,26 +65,6 @@ CMAKE_BINARY_DIR = /home/syrmia/BankManagementSystem /src/BankManagementSystem/
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/local/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-.PHONY : edit_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/local/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-.PHONY : test/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -94,6 +74,16 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/local/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -127,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named main
+
+# Build rule for target.
+main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
+.PHONY : main
+
+# fast build rule for target.
+main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
+
+#=============================================================================
 # Target rules for targets named Bank
 
 # Build rule for target.
@@ -149,8 +152,21 @@ TrustAccount: cmake_check_build_system
 
 # fast build rule for target.
 TrustAccount/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrustAccount.dir/build.make CMakeFiles/TrustAccount.dir/build
+	$(MAKE) $(MAKESILENT) -f my_Account/CMakeFiles/TrustAccount.dir/build.make my_Account/CMakeFiles/TrustAccount.dir/build
 .PHONY : TrustAccount/fast
+
+#=============================================================================
+# Target rules for targets named SavingsAccount
+
+# Build rule for target.
+SavingsAccount: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SavingsAccount
+.PHONY : SavingsAccount
+
+# fast build rule for target.
+SavingsAccount/fast:
+	$(MAKE) $(MAKESILENT) -f my_Account/CMakeFiles/SavingsAccount.dir/build.make my_Account/CMakeFiles/SavingsAccount.dir/build
+.PHONY : SavingsAccount/fast
 
 #=============================================================================
 # Target rules for targets named CurrentAccount
@@ -162,7 +178,7 @@ CurrentAccount: cmake_check_build_system
 
 # fast build rule for target.
 CurrentAccount/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrentAccount.dir/build.make CMakeFiles/CurrentAccount.dir/build
+	$(MAKE) $(MAKESILENT) -f my_Account/CMakeFiles/CurrentAccount.dir/build.make my_Account/CMakeFiles/CurrentAccount.dir/build
 .PHONY : CurrentAccount/fast
 
 #=============================================================================
@@ -175,34 +191,8 @@ CreditCardAccount: cmake_check_build_system
 
 # fast build rule for target.
 CreditCardAccount/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CreditCardAccount.dir/build.make CMakeFiles/CreditCardAccount.dir/build
+	$(MAKE) $(MAKESILENT) -f my_Account/CMakeFiles/CreditCardAccount.dir/build.make my_Account/CMakeFiles/CreditCardAccount.dir/build
 .PHONY : CreditCardAccount/fast
-
-#=============================================================================
-# Target rules for targets named main
-
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
-
-# fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
-
-#=============================================================================
-# Target rules for targets named SavingsAccount
-
-# Build rule for target.
-SavingsAccount: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SavingsAccount
-.PHONY : SavingsAccount
-
-# fast build rule for target.
-SavingsAccount/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SavingsAccount.dir/build.make CMakeFiles/SavingsAccount.dir/build
-.PHONY : SavingsAccount/fast
 
 # target to build an object file
 Bank.o:
@@ -218,66 +208,6 @@ Bank.i:
 Bank.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bank.dir/build.make CMakeFiles/Bank.dir/Bank.s
 .PHONY : Bank.s
-
-# target to build an object file
-CreditCardAccount.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CreditCardAccount.dir/build.make CMakeFiles/CreditCardAccount.dir/CreditCardAccount.o
-.PHONY : CreditCardAccount.o
-
-# target to preprocess a source file
-CreditCardAccount.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CreditCardAccount.dir/build.make CMakeFiles/CreditCardAccount.dir/CreditCardAccount.i
-.PHONY : CreditCardAccount.i
-
-# target to generate assembly for a file
-CreditCardAccount.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CreditCardAccount.dir/build.make CMakeFiles/CreditCardAccount.dir/CreditCardAccount.s
-.PHONY : CreditCardAccount.s
-
-# target to build an object file
-CurrentAccount.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrentAccount.dir/build.make CMakeFiles/CurrentAccount.dir/CurrentAccount.o
-.PHONY : CurrentAccount.o
-
-# target to preprocess a source file
-CurrentAccount.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrentAccount.dir/build.make CMakeFiles/CurrentAccount.dir/CurrentAccount.i
-.PHONY : CurrentAccount.i
-
-# target to generate assembly for a file
-CurrentAccount.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrentAccount.dir/build.make CMakeFiles/CurrentAccount.dir/CurrentAccount.s
-.PHONY : CurrentAccount.s
-
-# target to build an object file
-SavingAccount.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SavingsAccount.dir/build.make CMakeFiles/SavingsAccount.dir/SavingAccount.o
-.PHONY : SavingAccount.o
-
-# target to preprocess a source file
-SavingAccount.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SavingsAccount.dir/build.make CMakeFiles/SavingsAccount.dir/SavingAccount.i
-.PHONY : SavingAccount.i
-
-# target to generate assembly for a file
-SavingAccount.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SavingsAccount.dir/build.make CMakeFiles/SavingsAccount.dir/SavingAccount.s
-.PHONY : SavingAccount.s
-
-# target to build an object file
-TrustAccount.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrustAccount.dir/build.make CMakeFiles/TrustAccount.dir/TrustAccount.o
-.PHONY : TrustAccount.o
-
-# target to preprocess a source file
-TrustAccount.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrustAccount.dir/build.make CMakeFiles/TrustAccount.dir/TrustAccount.i
-.PHONY : TrustAccount.i
-
-# target to generate assembly for a file
-TrustAccount.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrustAccount.dir/build.make CMakeFiles/TrustAccount.dir/TrustAccount.s
-.PHONY : TrustAccount.s
 
 # target to build an object file
 main.o:
@@ -302,7 +232,6 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... test"
 	@echo "... Bank"
 	@echo "... CreditCardAccount"
 	@echo "... CurrentAccount"
@@ -312,18 +241,6 @@ help:
 	@echo "... Bank.o"
 	@echo "... Bank.i"
 	@echo "... Bank.s"
-	@echo "... CreditCardAccount.o"
-	@echo "... CreditCardAccount.i"
-	@echo "... CreditCardAccount.s"
-	@echo "... CurrentAccount.o"
-	@echo "... CurrentAccount.i"
-	@echo "... CurrentAccount.s"
-	@echo "... SavingAccount.o"
-	@echo "... SavingAccount.i"
-	@echo "... SavingAccount.s"
-	@echo "... TrustAccount.o"
-	@echo "... TrustAccount.i"
-	@echo "... TrustAccount.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

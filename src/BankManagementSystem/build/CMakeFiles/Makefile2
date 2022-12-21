@@ -63,143 +63,51 @@ CMAKE_BINARY_DIR = /home/syrmia/BankManagementSystem /src/BankManagementSystem/
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/Bank.dir/all
-all: CMakeFiles/TrustAccount.dir/all
-all: CMakeFiles/CurrentAccount.dir/all
-all: CMakeFiles/CreditCardAccount.dir/all
 all: CMakeFiles/main.dir/all
-all: CMakeFiles/SavingsAccount.dir/all
+all: CMakeFiles/Bank.dir/all
+all: my_Account/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: my_Account/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/Bank.dir/clean
-clean: CMakeFiles/TrustAccount.dir/clean
-clean: CMakeFiles/CurrentAccount.dir/clean
-clean: CMakeFiles/CreditCardAccount.dir/clean
 clean: CMakeFiles/main.dir/clean
-clean: CMakeFiles/SavingsAccount.dir/clean
+clean: CMakeFiles/Bank.dir/clean
+clean: my_Account/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/Bank.dir
+# Directory level rules for directory my_Account
 
-# All Build rule for target.
-CMakeFiles/Bank.dir/all: CMakeFiles/TrustAccount.dir/all
-CMakeFiles/Bank.dir/all: CMakeFiles/CurrentAccount.dir/all
-CMakeFiles/Bank.dir/all: CMakeFiles/CreditCardAccount.dir/all
-CMakeFiles/Bank.dir/all: CMakeFiles/SavingsAccount.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bank.dir/build.make CMakeFiles/Bank.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bank.dir/build.make CMakeFiles/Bank.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles --progress-num=1,2 "Built target Bank"
-.PHONY : CMakeFiles/Bank.dir/all
+# Recursive "all" directory target.
+my_Account/all: my_Account/CMakeFiles/TrustAccount.dir/all
+my_Account/all: my_Account/CMakeFiles/SavingsAccount.dir/all
+my_Account/all: my_Account/CMakeFiles/CurrentAccount.dir/all
+my_Account/all: my_Account/CMakeFiles/CreditCardAccount.dir/all
+.PHONY : my_Account/all
 
-# Build rule for subdir invocation for target.
-CMakeFiles/Bank.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles 10
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Bank.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles 0
-.PHONY : CMakeFiles/Bank.dir/rule
+# Recursive "preinstall" directory target.
+my_Account/preinstall:
+.PHONY : my_Account/preinstall
 
-# Convenience name for target.
-Bank: CMakeFiles/Bank.dir/rule
-.PHONY : Bank
-
-# clean rule for target.
-CMakeFiles/Bank.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bank.dir/build.make CMakeFiles/Bank.dir/clean
-.PHONY : CMakeFiles/Bank.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/TrustAccount.dir
-
-# All Build rule for target.
-CMakeFiles/TrustAccount.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrustAccount.dir/build.make CMakeFiles/TrustAccount.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrustAccount.dir/build.make CMakeFiles/TrustAccount.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles --progress-num=9,10 "Built target TrustAccount"
-.PHONY : CMakeFiles/TrustAccount.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/TrustAccount.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TrustAccount.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles 0
-.PHONY : CMakeFiles/TrustAccount.dir/rule
-
-# Convenience name for target.
-TrustAccount: CMakeFiles/TrustAccount.dir/rule
-.PHONY : TrustAccount
-
-# clean rule for target.
-CMakeFiles/TrustAccount.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrustAccount.dir/build.make CMakeFiles/TrustAccount.dir/clean
-.PHONY : CMakeFiles/TrustAccount.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/CurrentAccount.dir
-
-# All Build rule for target.
-CMakeFiles/CurrentAccount.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrentAccount.dir/build.make CMakeFiles/CurrentAccount.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrentAccount.dir/build.make CMakeFiles/CurrentAccount.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles --progress-num=5,6 "Built target CurrentAccount"
-.PHONY : CMakeFiles/CurrentAccount.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/CurrentAccount.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/CurrentAccount.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles 0
-.PHONY : CMakeFiles/CurrentAccount.dir/rule
-
-# Convenience name for target.
-CurrentAccount: CMakeFiles/CurrentAccount.dir/rule
-.PHONY : CurrentAccount
-
-# clean rule for target.
-CMakeFiles/CurrentAccount.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrentAccount.dir/build.make CMakeFiles/CurrentAccount.dir/clean
-.PHONY : CMakeFiles/CurrentAccount.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/CreditCardAccount.dir
-
-# All Build rule for target.
-CMakeFiles/CreditCardAccount.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CreditCardAccount.dir/build.make CMakeFiles/CreditCardAccount.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CreditCardAccount.dir/build.make CMakeFiles/CreditCardAccount.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles --progress-num=3,4 "Built target CreditCardAccount"
-.PHONY : CMakeFiles/CreditCardAccount.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/CreditCardAccount.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/CreditCardAccount.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles 0
-.PHONY : CMakeFiles/CreditCardAccount.dir/rule
-
-# Convenience name for target.
-CreditCardAccount: CMakeFiles/CreditCardAccount.dir/rule
-.PHONY : CreditCardAccount
-
-# clean rule for target.
-CMakeFiles/CreditCardAccount.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CreditCardAccount.dir/build.make CMakeFiles/CreditCardAccount.dir/clean
-.PHONY : CMakeFiles/CreditCardAccount.dir/clean
+# Recursive "clean" directory target.
+my_Account/clean: my_Account/CMakeFiles/TrustAccount.dir/clean
+my_Account/clean: my_Account/CMakeFiles/SavingsAccount.dir/clean
+my_Account/clean: my_Account/CMakeFiles/CurrentAccount.dir/clean
+my_Account/clean: my_Account/CMakeFiles/CreditCardAccount.dir/clean
+.PHONY : my_Account/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/main.dir
 
 # All Build rule for target.
 CMakeFiles/main.dir/all: CMakeFiles/Bank.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/TrustAccount.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/CurrentAccount.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/CreditCardAccount.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/SavingsAccount.dir/all
+CMakeFiles/main.dir/all: my_Account/CMakeFiles/TrustAccount.dir/all
+CMakeFiles/main.dir/all: my_Account/CMakeFiles/SavingsAccount.dir/all
+CMakeFiles/main.dir/all: my_Account/CMakeFiles/CurrentAccount.dir/all
+CMakeFiles/main.dir/all: my_Account/CMakeFiles/CreditCardAccount.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles --progress-num=11,12 "Built target main"
@@ -222,30 +130,137 @@ CMakeFiles/main.dir/clean:
 .PHONY : CMakeFiles/main.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/SavingsAccount.dir
+# Target rules for target CMakeFiles/Bank.dir
 
 # All Build rule for target.
-CMakeFiles/SavingsAccount.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SavingsAccount.dir/build.make CMakeFiles/SavingsAccount.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SavingsAccount.dir/build.make CMakeFiles/SavingsAccount.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles --progress-num=7,8 "Built target SavingsAccount"
-.PHONY : CMakeFiles/SavingsAccount.dir/all
+CMakeFiles/Bank.dir/all: my_Account/CMakeFiles/TrustAccount.dir/all
+CMakeFiles/Bank.dir/all: my_Account/CMakeFiles/SavingsAccount.dir/all
+CMakeFiles/Bank.dir/all: my_Account/CMakeFiles/CurrentAccount.dir/all
+CMakeFiles/Bank.dir/all: my_Account/CMakeFiles/CreditCardAccount.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bank.dir/build.make CMakeFiles/Bank.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bank.dir/build.make CMakeFiles/Bank.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles --progress-num=1,2 "Built target Bank"
+.PHONY : CMakeFiles/Bank.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/SavingsAccount.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SavingsAccount.dir/all
+CMakeFiles/Bank.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles 10
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Bank.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles 0
-.PHONY : CMakeFiles/SavingsAccount.dir/rule
+.PHONY : CMakeFiles/Bank.dir/rule
 
 # Convenience name for target.
-SavingsAccount: CMakeFiles/SavingsAccount.dir/rule
+Bank: CMakeFiles/Bank.dir/rule
+.PHONY : Bank
+
+# clean rule for target.
+CMakeFiles/Bank.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bank.dir/build.make CMakeFiles/Bank.dir/clean
+.PHONY : CMakeFiles/Bank.dir/clean
+
+#=============================================================================
+# Target rules for target my_Account/CMakeFiles/TrustAccount.dir
+
+# All Build rule for target.
+my_Account/CMakeFiles/TrustAccount.dir/all:
+	$(MAKE) $(MAKESILENT) -f my_Account/CMakeFiles/TrustAccount.dir/build.make my_Account/CMakeFiles/TrustAccount.dir/depend
+	$(MAKE) $(MAKESILENT) -f my_Account/CMakeFiles/TrustAccount.dir/build.make my_Account/CMakeFiles/TrustAccount.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles --progress-num=9,10 "Built target TrustAccount"
+.PHONY : my_Account/CMakeFiles/TrustAccount.dir/all
+
+# Build rule for subdir invocation for target.
+my_Account/CMakeFiles/TrustAccount.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_Account/CMakeFiles/TrustAccount.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles 0
+.PHONY : my_Account/CMakeFiles/TrustAccount.dir/rule
+
+# Convenience name for target.
+TrustAccount: my_Account/CMakeFiles/TrustAccount.dir/rule
+.PHONY : TrustAccount
+
+# clean rule for target.
+my_Account/CMakeFiles/TrustAccount.dir/clean:
+	$(MAKE) $(MAKESILENT) -f my_Account/CMakeFiles/TrustAccount.dir/build.make my_Account/CMakeFiles/TrustAccount.dir/clean
+.PHONY : my_Account/CMakeFiles/TrustAccount.dir/clean
+
+#=============================================================================
+# Target rules for target my_Account/CMakeFiles/SavingsAccount.dir
+
+# All Build rule for target.
+my_Account/CMakeFiles/SavingsAccount.dir/all:
+	$(MAKE) $(MAKESILENT) -f my_Account/CMakeFiles/SavingsAccount.dir/build.make my_Account/CMakeFiles/SavingsAccount.dir/depend
+	$(MAKE) $(MAKESILENT) -f my_Account/CMakeFiles/SavingsAccount.dir/build.make my_Account/CMakeFiles/SavingsAccount.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles --progress-num=7,8 "Built target SavingsAccount"
+.PHONY : my_Account/CMakeFiles/SavingsAccount.dir/all
+
+# Build rule for subdir invocation for target.
+my_Account/CMakeFiles/SavingsAccount.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_Account/CMakeFiles/SavingsAccount.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles 0
+.PHONY : my_Account/CMakeFiles/SavingsAccount.dir/rule
+
+# Convenience name for target.
+SavingsAccount: my_Account/CMakeFiles/SavingsAccount.dir/rule
 .PHONY : SavingsAccount
 
 # clean rule for target.
-CMakeFiles/SavingsAccount.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SavingsAccount.dir/build.make CMakeFiles/SavingsAccount.dir/clean
-.PHONY : CMakeFiles/SavingsAccount.dir/clean
+my_Account/CMakeFiles/SavingsAccount.dir/clean:
+	$(MAKE) $(MAKESILENT) -f my_Account/CMakeFiles/SavingsAccount.dir/build.make my_Account/CMakeFiles/SavingsAccount.dir/clean
+.PHONY : my_Account/CMakeFiles/SavingsAccount.dir/clean
+
+#=============================================================================
+# Target rules for target my_Account/CMakeFiles/CurrentAccount.dir
+
+# All Build rule for target.
+my_Account/CMakeFiles/CurrentAccount.dir/all:
+	$(MAKE) $(MAKESILENT) -f my_Account/CMakeFiles/CurrentAccount.dir/build.make my_Account/CMakeFiles/CurrentAccount.dir/depend
+	$(MAKE) $(MAKESILENT) -f my_Account/CMakeFiles/CurrentAccount.dir/build.make my_Account/CMakeFiles/CurrentAccount.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles --progress-num=5,6 "Built target CurrentAccount"
+.PHONY : my_Account/CMakeFiles/CurrentAccount.dir/all
+
+# Build rule for subdir invocation for target.
+my_Account/CMakeFiles/CurrentAccount.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_Account/CMakeFiles/CurrentAccount.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles 0
+.PHONY : my_Account/CMakeFiles/CurrentAccount.dir/rule
+
+# Convenience name for target.
+CurrentAccount: my_Account/CMakeFiles/CurrentAccount.dir/rule
+.PHONY : CurrentAccount
+
+# clean rule for target.
+my_Account/CMakeFiles/CurrentAccount.dir/clean:
+	$(MAKE) $(MAKESILENT) -f my_Account/CMakeFiles/CurrentAccount.dir/build.make my_Account/CMakeFiles/CurrentAccount.dir/clean
+.PHONY : my_Account/CMakeFiles/CurrentAccount.dir/clean
+
+#=============================================================================
+# Target rules for target my_Account/CMakeFiles/CreditCardAccount.dir
+
+# All Build rule for target.
+my_Account/CMakeFiles/CreditCardAccount.dir/all:
+	$(MAKE) $(MAKESILENT) -f my_Account/CMakeFiles/CreditCardAccount.dir/build.make my_Account/CMakeFiles/CreditCardAccount.dir/depend
+	$(MAKE) $(MAKESILENT) -f my_Account/CMakeFiles/CreditCardAccount.dir/build.make my_Account/CMakeFiles/CreditCardAccount.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles --progress-num=3,4 "Built target CreditCardAccount"
+.PHONY : my_Account/CMakeFiles/CreditCardAccount.dir/all
+
+# Build rule for subdir invocation for target.
+my_Account/CMakeFiles/CreditCardAccount.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_Account/CMakeFiles/CreditCardAccount.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles 0
+.PHONY : my_Account/CMakeFiles/CreditCardAccount.dir/rule
+
+# Convenience name for target.
+CreditCardAccount: my_Account/CMakeFiles/CreditCardAccount.dir/rule
+.PHONY : CreditCardAccount
+
+# clean rule for target.
+my_Account/CMakeFiles/CreditCardAccount.dir/clean:
+	$(MAKE) $(MAKESILENT) -f my_Account/CMakeFiles/CreditCardAccount.dir/build.make my_Account/CMakeFiles/CreditCardAccount.dir/clean
+.PHONY : my_Account/CMakeFiles/CreditCardAccount.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
