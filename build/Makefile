@@ -162,7 +162,7 @@ TrustAccount: cmake_check_build_system
 
 # fast build rule for target.
 TrustAccount/fast:
-	$(MAKE) $(MAKESILENT) -f src/BankManagementSystem/my_Account/CMakeFiles/TrustAccount.dir/build.make src/BankManagementSystem/my_Account/CMakeFiles/TrustAccount.dir/build
+	$(MAKE) $(MAKESILENT) -f src/BankManagementSystem/bank_account/CMakeFiles/TrustAccount.dir/build.make src/BankManagementSystem/bank_account/CMakeFiles/TrustAccount.dir/build
 .PHONY : TrustAccount/fast
 
 #=============================================================================
@@ -175,7 +175,7 @@ SavingsAccount: cmake_check_build_system
 
 # fast build rule for target.
 SavingsAccount/fast:
-	$(MAKE) $(MAKESILENT) -f src/BankManagementSystem/my_Account/CMakeFiles/SavingsAccount.dir/build.make src/BankManagementSystem/my_Account/CMakeFiles/SavingsAccount.dir/build
+	$(MAKE) $(MAKESILENT) -f src/BankManagementSystem/bank_account/CMakeFiles/SavingsAccount.dir/build.make src/BankManagementSystem/bank_account/CMakeFiles/SavingsAccount.dir/build
 .PHONY : SavingsAccount/fast
 
 #=============================================================================
@@ -188,7 +188,7 @@ CurrentAccount: cmake_check_build_system
 
 # fast build rule for target.
 CurrentAccount/fast:
-	$(MAKE) $(MAKESILENT) -f src/BankManagementSystem/my_Account/CMakeFiles/CurrentAccount.dir/build.make src/BankManagementSystem/my_Account/CMakeFiles/CurrentAccount.dir/build
+	$(MAKE) $(MAKESILENT) -f src/BankManagementSystem/bank_account/CMakeFiles/CurrentAccount.dir/build.make src/BankManagementSystem/bank_account/CMakeFiles/CurrentAccount.dir/build
 .PHONY : CurrentAccount/fast
 
 #=============================================================================
@@ -201,7 +201,7 @@ CreditCardAccount: cmake_check_build_system
 
 # fast build rule for target.
 CreditCardAccount/fast:
-	$(MAKE) $(MAKESILENT) -f src/BankManagementSystem/my_Account/CMakeFiles/CreditCardAccount.dir/build.make src/BankManagementSystem/my_Account/CMakeFiles/CreditCardAccount.dir/build
+	$(MAKE) $(MAKESILENT) -f src/BankManagementSystem/bank_account/CMakeFiles/CreditCardAccount.dir/build.make src/BankManagementSystem/bank_account/CMakeFiles/CreditCardAccount.dir/build
 .PHONY : CreditCardAccount/fast
 
 # Help Target

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/syrmia/BankManagementSystem /src/BankManagementSystem/src/BankManagementSystem/my_Account
+CXX_INCLUDES = -I/home/syrmia/BankManagementSystem /src/BankManagementSystem/src/BankManagementSystem/bank_account
 
 CXX_FLAGS = -g
 

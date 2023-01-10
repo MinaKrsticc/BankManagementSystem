@@ -1,5 +1,5 @@
-include_directories(${PROJECT_SOURCE_DIR}/src/BankManagementSystem/my_Account)
-add_subdirectory(my_Account)
+include_directories(${PROJECT_SOURCE_DIR}/src/BankManagementSystem/bank_account)
+add_subdirectory(bank_account)
 
 add_library(Bank Bank.cpp)
 
@@ -7,5 +7,5 @@ add_library(Bank Bank.cpp)
 add_executable(main main.cpp)
 
 target_link_libraries(Bank CreditCardAccount CurrentAccount SavingsAccount TrustAccount)
-target_link_libraries(main my_Account CurrentAccount CreditCardAccount  SavingsAccount TrustAccount Bank )
+target_link_libraries(main bank_account CurrentAccount CreditCardAccount  SavingsAccount TrustAccount Bank )
 

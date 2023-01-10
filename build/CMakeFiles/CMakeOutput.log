@@ -433,3 +433,31 @@ Parsed CXX implicit link information from above output:
   implicit fwks: []
 
 
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/syrmia/BankManagementSystem /build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_c2422/fast && /usr/bin/make  -f CMakeFiles/cmTC_c2422.dir/build.make CMakeFiles/cmTC_c2422.dir/build
+make[1]: Entering directory '/home/syrmia/BankManagementSystem /build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c2422.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_c2422.dir/CheckIncludeFile.c.o -c /home/syrmia/BankManagementSystem /build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_c2422
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c2422.dir/link.txt --verbose=1
+/usr/bin/cc -rdynamic CMakeFiles/cmTC_c2422.dir/CheckIncludeFile.c.o -o cmTC_c2422 
+make[1]: Leaving directory '/home/syrmia/BankManagementSystem /build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/syrmia/BankManagementSystem /build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_85c26/fast && /usr/bin/make  -f CMakeFiles/cmTC_85c26.dir/build.make CMakeFiles/cmTC_85c26.dir/build
+make[1]: Entering directory '/home/syrmia/BankManagementSystem /build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_85c26.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_85c26.dir/CheckFunctionExists.c.o -c /usr/local/share/cmake-3.20/Modules/CheckFunctionExists.c
+Linking C executable cmTC_85c26
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_85c26.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_85c26.dir/CheckFunctionExists.c.o -o cmTC_85c26  -lpthread 
+make[1]: Leaving directory '/home/syrmia/BankManagementSystem /build/CMakeFiles/CMakeTmp'
+
+
+

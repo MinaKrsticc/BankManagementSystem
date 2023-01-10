@@ -8,10 +8,10 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "../CMakeLists.txt"
+  "../bank_account/CMakeLists.txt"
   "CMakeFiles/3.20.0/CMakeCCompiler.cmake"
   "CMakeFiles/3.20.0/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.20.0/CMakeSystem.cmake"
-  "../my_Account/CMakeLists.txt"
   "/usr/local/share/cmake-3.20/Modules/CMakeCInformation.cmake"
   "/usr/local/share/cmake-3.20/Modules/CMakeCXXInformation.cmake"
   "/usr/local/share/cmake-3.20/Modules/CMakeCommonLanguageInclude.cmake"
@@ -40,15 +40,15 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "my_Account/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "bank_account/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/main.dir/DependInfo.cmake"
   "CMakeFiles/Bank.dir/DependInfo.cmake"
-  "my_Account/CMakeFiles/TrustAccount.dir/DependInfo.cmake"
-  "my_Account/CMakeFiles/SavingsAccount.dir/DependInfo.cmake"
-  "my_Account/CMakeFiles/CurrentAccount.dir/DependInfo.cmake"
-  "my_Account/CMakeFiles/CreditCardAccount.dir/DependInfo.cmake"
+  "bank_account/CMakeFiles/TrustAccount.dir/DependInfo.cmake"
+  "bank_account/CMakeFiles/SavingsAccount.dir/DependInfo.cmake"
+  "bank_account/CMakeFiles/CurrentAccount.dir/DependInfo.cmake"
+  "bank_account/CMakeFiles/CreditCardAccount.dir/DependInfo.cmake"
   )

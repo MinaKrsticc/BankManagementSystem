@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wall -Wextra -fPIC -O3 -rdynamic CMakeFiles/BankManagementSystem_test.dir/current_test.cpp.o -o ../../bin/BankManagementSystem_test   -L/home/syrmia/BankManagementSystem /src/BankManagementSystem/bank_account/.  -Wl,-rpath,/home/syrmia/BankManagementSystem /src/BankManagementSystem/bank_account/. ../../lib/libCurrentAccount.a 

@@ -9,10 +9,10 @@
 /home/syrmia/BankManagementSystem /build/src/BankManagementSystem/CMakeFiles/test.dir
 /home/syrmia/BankManagementSystem /build/src/BankManagementSystem/CMakeFiles/main.dir
 /home/syrmia/BankManagementSystem /build/src/BankManagementSystem/CMakeFiles/Bank.dir
-/home/syrmia/BankManagementSystem /build/src/BankManagementSystem/my_Account/CMakeFiles/edit_cache.dir
-/home/syrmia/BankManagementSystem /build/src/BankManagementSystem/my_Account/CMakeFiles/test.dir
-/home/syrmia/BankManagementSystem /build/src/BankManagementSystem/my_Account/CMakeFiles/rebuild_cache.dir
-/home/syrmia/BankManagementSystem /build/src/BankManagementSystem/my_Account/CMakeFiles/TrustAccount.dir
-/home/syrmia/BankManagementSystem /build/src/BankManagementSystem/my_Account/CMakeFiles/SavingsAccount.dir
-/home/syrmia/BankManagementSystem /build/src/BankManagementSystem/my_Account/CMakeFiles/CurrentAccount.dir
-/home/syrmia/BankManagementSystem /build/src/BankManagementSystem/my_Account/CMakeFiles/CreditCardAccount.dir
+/home/syrmia/BankManagementSystem /build/src/BankManagementSystem/bank_account/CMakeFiles/edit_cache.dir
+/home/syrmia/BankManagementSystem /build/src/BankManagementSystem/bank_account/CMakeFiles/test.dir
+/home/syrmia/BankManagementSystem /build/src/BankManagementSystem/bank_account/CMakeFiles/rebuild_cache.dir
+/home/syrmia/BankManagementSystem /build/src/BankManagementSystem/bank_account/CMakeFiles/TrustAccount.dir
+/home/syrmia/BankManagementSystem /build/src/BankManagementSystem/bank_account/CMakeFiles/SavingsAccount.dir
+/home/syrmia/BankManagementSystem /build/src/BankManagementSystem/bank_account/CMakeFiles/CurrentAccount.dir
+/home/syrmia/BankManagementSystem /build/src/BankManagementSystem/bank_account/CMakeFiles/CreditCardAccount.dir
