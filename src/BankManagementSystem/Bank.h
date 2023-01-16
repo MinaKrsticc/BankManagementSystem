@@ -12,6 +12,8 @@ private:
     vector<Account *> accounts;
 
 public:
+    static vector<float> bankStatement;
+
     Bank();
     ~Bank();
     void OpenAccount(Account &acc);
@@ -24,5 +26,8 @@ public:
     void SortAndPrintForAmount();
     void SortAndPrintForDate();
     void SortAndPrintForName();
+    void PrintHistoryForWithdraw();
+    void PrintHistoryForDeposit();
 
+    void PrintBankStatement();
 };

@@ -19,6 +19,7 @@ namespace bank_account
         ~SavingAccount();
         float Deposit(float amountMoney) override;
         float Withdraw(float amountMoney) override;
+        void CurrentDate() override;
         void Print() override;
     };
 }

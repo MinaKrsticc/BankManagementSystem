@@ -1,4 +1,3 @@
-#pragma once
 #include <vector>
 #include <string.h>
 #include <typeinfo>
@@ -47,23 +46,6 @@ void Bank::CloseAccount(Account &acc)
     {
         this->accounts.erase(this->accounts.begin() + i);
     }
-
-    // while (this->accounts[i] != &acc && this->accounts[i] != nullptr)
-    // {
-    //     i++;
-    // }
-    // if (this->accounts[i] == &acc)
-    // {
-    //     Account *pomAcc = this->accounts[i];
-    //     while (this->accounts[i + 1] != nullptr)
-    //     {
-    //         this->accounts[i] = this->accounts[i + 1];
-    //         i++;
-    //     }
-    //     this->accounts.pop_back();
-    //     pomAcc = nullptr;
-    //     delete (pomAcc);
-    // }
 }
 
 void Bank::Print()
@@ -229,4 +211,92 @@ void Bank::SortAndPrintForName()
     }
     cout << "SortAndPrintForName" << endl;
     cout << endl;
+}
+
+void Bank::PrintHistoryForDeposit()
+{
+    int len = this->accounts.size();
+    long unsigned int i;
+    int size = 0;
+    cout<<"Istorija uplacivanja novca za:  "<<endl;
+    for(int j = 0; j < len; j++)
+    {
+        i = 0;
+        if ((typeid(*this->accounts[j]) == typeid(CurrentAccount)))
+        {
+            cout<<"CurrentAccount"<<endl;
+            size = this->accounts[j]->historyForDeposit.size();
+        } 
+        else if ((typeid(*this->accounts[j]) == typeid(CreditCardAccount)))
+        {
+            cout<<"CreditCardAccount"<<endl;
+            size = this->accounts[j]->historyForDeposit.size();
+        }
+        else if ((typeid(*this->accounts[j]) == typeid(SavingAccount)))
+        {
+            cout<<"SavingAccount"<<endl;
+            size = this->accounts[j]->historyForDeposit.size();
+        }
+        else if ((typeid(*this->accounts[j]) == typeid(TrustAccount)))
+        {
+            cout<<"TrustAccount"<<endl;
+            size = this->accounts[j]->historyForDeposit.size();
+        }
+
+        while (i < size && size > 0)
+        {
+            cout << "Uplatio je korisnik: "<< this->accounts[j]->name
+            <<"  datuma: " <<this->accounts[j]->dateTransaction.days<<". "<< this->accounts[j]->dateTransaction.month<<". "<<this->accounts[j]->dateTransaction.year<<" "
+            << "iznos: "<< this->accounts[j]->historyForDeposit[i] <<"  trenutno stanje na racunu: " << this->accounts[j]->historyForDepositAvailableFunds[i]<<endl;
+            i++;
+        }
+    }
+}
+
+void Bank::PrintHistoryForWithdraw()
+{
+    int len = this->accounts.size();
+    int i;
+    int size;
+    cout<<"Istorija podizanja novca za:  "<<endl;
+    for(int j = 0; j < len; j++)
+    {
+        i = 0;
+        if ((typeid(*this->accounts[j]) == typeid(CurrentAccount)))
+        {
+            cout<<"CurrentAccount"<<endl;
+            size = this->accounts[j]->historyForWithdraw.size();
+        } 
+        else if ((typeid(*this->accounts[j]) == typeid(CreditCardAccount)))
+        {
+            cout<<"CreditCardAccount"<<endl;
+            size = this->accounts[j]->historyForWithdraw.size();
+        }
+        else if ((typeid(*this->accounts[j]) == typeid(SavingAccount)))
+        {
+            cout<<"SavingAccount"<<endl;
+            size = this->accounts[j]->historyForWithdraw.size();
+        }
+        else if ((typeid(*this->accounts[j]) == typeid(TrustAccount)))
+        {
+            cout<<"TrustAccount"<<endl;
+            size = this->accounts[j]->historyForWithdraw.size();
+        }
+        while (i < size && size > 0)
+        {
+            cout << "Podigao je korisnik: "<< this->accounts[j]->name
+            <<"  datuma: " <<this->accounts[j]->dateTransaction.days<<". "<< this->accounts[j]->dateTransaction.month<<". "<<this->accounts[j]->dateTransaction.year<<"  "
+            <<" iznos: "<< this->accounts[j]->historyForWithdraw[i]<<"  trenutno stanje na racunu: " << this->accounts[j]->historyForWithdrawAvailableFunds[i]<<endl;
+            i++;
+        }
+    }
+}
+
+void Bank::PrintBankStatement()
+{
+    int len = this->bankStatement.size();
+    for(int i  = 0; i++; i < len)
+    {
+        cout<< "Podignuto je: "<< this->bankStatement[i]<<endl;
+    }
 }

@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../lib/libHistory.a CMakeFiles/History.dir/History.cpp.o
+/usr/bin/ranlib ../../../lib/libHistory.a

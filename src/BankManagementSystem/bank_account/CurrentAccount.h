@@ -16,6 +16,7 @@ namespace bank_account
         ~CurrentAccount();
         float Deposit(float amountMoney) override ;
         float Withdraw(float amountMoney) override ;
+        void CurrentDate() override;
         void Print() override ;
     };
 }

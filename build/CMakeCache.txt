@@ -258,6 +258,9 @@ CTEST_SUBMIT_RETRY_DELAY:STRING=5
 //Maximum time allowed before CTest will kill the test.
 DART_TESTING_TIMEOUT:STRING=1500
 
+//Dependencies for the target
+History_LIB_DEPENDS:STATIC=general;Bank;general;CreditCardAccount;general;CurrentAccount;general;SavingsAccount;general;TrustAccount;
+
 //Command to build the project
 MAKECOMMAND:STRING=/usr/local/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
 

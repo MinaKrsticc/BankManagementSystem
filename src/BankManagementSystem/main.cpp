@@ -1,4 +1,3 @@
-#pragma once
 #include "Bank.h"
 #include "bank_account/Account.h"
 #include "bank_account/CurrentAccount.h"
@@ -36,8 +35,8 @@ int main()
     datumi.month = 8;
     datumi.year = 2022;
 
-    CurrentAccount curAcc(datumm, adresa, ime, 10000.0, 15000);
-    CurrentAccount curAccount(datum, adresac, imec, 10000.0, 15000);
+    CurrentAccount curAcc(datumm, ime, adresa, 10000.0, 15000);
+    CurrentAccount curAccount(datum, imec, adresac, 10000.0, 15000);
     SavingAccount saveAcc(datum, ime, adresa, 30000.0, 10000);
     CreditCardAccount creditAcc(datumi, imeA, adresaA, 25000.0, 5000.0, 50000.0);
     CreditCardAccount creditA(datumm, imee, adresaa, 12000.0, 5000.0, 50000.0);
@@ -45,6 +44,7 @@ int main()
 
     Account &cur = curAcc;
     cur.Deposit(2000);
+    cur.Deposit(12000);
     cur.Withdraw(1500);
     Account &credit = creditAcc;
     credit.Withdraw(10000);
@@ -61,7 +61,7 @@ int main()
     Account &trust = trstAcc;
     trust.Withdraw(30000);
     trust.Withdraw(30000);
-    Account &creditacc= creditA;
+    Account &creditacc = creditA;
     creditacc.Withdraw(13000);
 
     Bank banka{};
@@ -76,24 +76,37 @@ int main()
     banka.FundsAvailable(5000);
     banka.AvailableMinus();
     banka.AvaibleForWithdraw();
-    banka.CloseAccount(curAcc);
-    banka.Print();
+    //banka.CloseAccount(curAcc);
+   // banka.Print();
     banka.SortAndPrintForAmount();
     banka.SortAndPrintForDate();
     banka.SortAndPrintForName();
+    banka.PrintHistoryForWithdraw();
+    banka.PrintHistoryForDeposit();
+    banka.PrintBankStatement();
 
-    CurrentAccount curAcca(datumm, adresa, ime, 10000.0, 15000);
-    CurrentAccount curAccounts(datum, adresac, imec, 10000.0, 15000);
-    SavingAccount saveAcca(datum, ime, adresa, 30000.0, 10000);
-    CreditCardAccount creditAcca(datumi, imeA, adresaA, 25000.0, 5000.0, 50000.0);
-    CreditCardAccount creditAc(datumm, imee, adresaa, 12000.0, 5000.0, 50000.0);
-    TrustAccount trstAcca(datum, ime, adresa, 50000);
+    // CurrentAccount curAcca(datumm, adresa, ime, 10000.0, 15000);
+    // CurrentAccount curAccounts(datum, adresac, imec, 10000.0, 15000);
+    // SavingAccount saveAcca(datum, ime, adresa, 30000.0, 10000);
+    // TrustAccount trstAcca(datum, ime, adresa, 50000);
+    // TrustAccount trstAccSec(datum, ime, adresa, 54000);
 
-    Bank bank{};
-    bank.OpenAccount(curAcca);
-    bank.OpenAccount(curAccounts);
-    bank.OpenAccount(saveAcca);
-    bank.StatisticOfAccount();
+    // Account &accountTrstAccSec = trstAccSec;
+    // accountTrstAccSec.Withdraw(3000);
+    // accountTrstAccSec.Withdraw(3200);
+    // Account &accountSaveAcca = saveAcca;
+    // accountSaveAcca.Withdraw(4000);
+    // accountSaveAcca.Withdraw(600);
+
+    // Bank bank{};
+    // bank.OpenAccount(curAcca);
+    // bank.OpenAccount(curAccounts);
+    // bank.OpenAccount(saveAcca);
+    // bank.OpenAccount(trstAccSec);
+    // bank.OpenAccount(trstAcca);
+    // bank.Print();
+
+    // bank.StatisticOfAccount();
 
     return 0;
 }

@@ -218,6 +218,9 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 //Single output directory for building all executables.
 EXECUTABLE_OUTPUT_PATH:PATH=
 
+//Dependencies for the target
+History_LIB_DEPENDS:STATIC=general;Bank;general;CreditCardAccount;general;CurrentAccount;general;SavingsAccount;general;TrustAccount;
+
 //Single output directory for building all libraries.
 LIBRARY_OUTPUT_PATH:PATH=
 
