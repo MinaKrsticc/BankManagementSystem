@@ -97,6 +97,8 @@ main: bank_account/libCreditCardAccount.a
 main: bank_account/libSavingsAccount.a
 main: bank_account/libTrustAccount.a
 main: libBank.a
+main: libAccountTranslation.a
+main: libBank.a
 main: bank_account/libCurrentAccount.a
 main: bank_account/libCreditCardAccount.a
 main: bank_account/libSavingsAccount.a

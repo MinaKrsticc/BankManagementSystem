@@ -147,6 +147,7 @@ bank_account/CMakeFiles/TrustAccount.dir/TrustAccount.o: \
  /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/istream \
  /usr/include/c++/9/bits/istream.tcc \
  /home/syrmia/BankManagementSystem /src/BankManagementSystem/bank_account/../Bank.h \
+ /home/syrmia/BankManagementSystem /src/BankManagementSystem/bank_account/../AccountTranslation.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h \
  /usr/include/c++/9/cassert /usr/include/assert.h \
  /usr/include/c++/9/cfloat \

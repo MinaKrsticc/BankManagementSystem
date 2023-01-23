@@ -11,9 +11,9 @@ namespace bank_account
         this->adress = "";
         this->name = "";
         this->availableFunds = 10000.0;
-        this->dateTime.days = 1;
-        this->dateTime.month = 1;
-        this->dateTime.year = 2023;
+        this->createDateTime.days = 1;
+        this->createDateTime.month = 1;
+        this->createDateTime.year = 2023;
         this->limitMoney = 1000.0;
     }
 
@@ -27,20 +27,16 @@ namespace bank_account
         this->name = nameUser;
         this->limitMoney = limitUsersMoney;
         this->availableFunds = amountMoney;
-        this->dateTime.days = creationDate.days;
-        this->dateTime.month = creationDate.month;
-        this->dateTime.year = creationDate.year;
+        this->createDateTime.days = creationDate.days;
+        this->createDateTime.month = creationDate.month;
+        this->createDateTime.year = creationDate.year;
     }
 
     float CurrentAccount::Deposit(float amountMoney)
     {
-        CurrentDate();
         this->availableFunds = this->availableFunds + amountMoney;
 
-        this->historyForDepositAvailableFunds.push_back(this->availableFunds);
-        this->historyForDeposit.push_back(amountMoney);
-
-        Bank::bankStatement.push_back(amountMoney);
+        ApdateDate();
         return this->availableFunds;
     }
 
@@ -51,11 +47,8 @@ namespace bank_account
             if (amountMoney <= this->limitMoney)
             {
                 this->availableFunds = this->availableFunds - amountMoney;
-                this->historyForWithdrawAvailableFunds.push_back(this->availableFunds);
-                this->historyForWithdraw.push_back(amountMoney);
 
-                Bank::bankStatement.push_back(amountMoney);
-                CurrentDate();
+                ApdateDate();
             }
             else
             {
@@ -71,16 +64,45 @@ namespace bank_account
         cout<< this->name <<endl;
         cout<< this->adress <<endl;
         cout<< this->availableFunds <<endl;
-        cout<< this->dateTime.days << ". " << this->dateTime.month << ". " << this->dateTime.year <<endl;
+        cout<< this->createDateTime.days << ". " << this->createDateTime.month << ". " << this->createDateTime.year <<endl;
         cout<< "CurrentAccount" << endl;
     }
 
-    void CurrentAccount::CurrentDate()
+    void CurrentAccount::ApdateDate()
     {
         time_t ttime = time(0);
         tm *local_time = localtime(&ttime);
         this->dateTransaction.year = 1900 + local_time->tm_year;
         this->dateTransaction.month = 1 + local_time->tm_mon;
         this->dateTransaction.days = local_time->tm_mday;
+    }
+
+    bool CurrentAccount::FundsAvailableOnAccount(float amound)
+    {
+       if(this->availableFunds >= amound)
+       {
+            return true;
+       } 
+       else
+       {
+            return false;
+       }
+    }
+
+    bool CurrentAccount::AvailableMinusOnAccount()
+    {
+        return false;
+    }
+
+    bool CurrentAccount::AvaibleForWithdrawOnAccount()
+    {
+        if (this->availableFunds > 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

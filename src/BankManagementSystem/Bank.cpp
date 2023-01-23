@@ -2,6 +2,7 @@
 #include <string.h>
 #include <typeinfo>
 #include "Bank.h"
+#include "AccountTranslation.h"
 #include <bits/stdc++.h>
 #include "bank_account/Account.h"
 #include "bank_account/CurrentAccount.h"
@@ -101,7 +102,7 @@ void Bank::FundsAvailable(float amound) // svi racuni koji imaju vise od amound 
     int len = this->accounts.size();
     for (int i = 0; i < len; i++)
     {
-        if (this->accounts[i]->availableFunds >= amound)
+        if(this->accounts[i]->FundsAvailableOnAccount(amound) == true)
         {
             this->accounts[i]->Print();
         }
@@ -116,12 +117,9 @@ void Bank::AvailableMinus() // svi racuni koji su u minusu
     int len = this->accounts.size();
     for (int i = 0; i < len; i++)
     {
-        if ((typeid(*this->accounts[i]) == typeid(CreditCardAccount)))
+        if(this->accounts[i]->AvailableMinusOnAccount() == true)
         {
-            if (this->accounts[i]->availableFunds < 0)
-            {
-                this->accounts[i]->Print();
-            }
+            this->accounts[i]->Print();
         }
     }
     cout << endl;
@@ -134,28 +132,9 @@ void Bank::AvaibleForWithdraw() // svi racuni dostupni za podizanje
     int len = this->accounts.size();
     for (int i = 0; i < len; i++)
     {
-        if (this->accounts[i]->availableFunds > 0)
+        if (this->accounts[i]->AvaibleForWithdrawOnAccount() == true)
         {
-            if ((typeid(*this->accounts[i]) == typeid(SavingAccount)))
-            {
-                if (this->accounts[i]->countWithdrawals + 1 <= SavingAccount::maxWithdrawals)
-                {
-                    this->accounts[i]->Print();
-                    i++;
-                }
-            }
-            else if ((typeid(*this->accounts[i]) == typeid(TrustAccount)))
-            {
-                if (this->accounts[i]->countWithdrawals + 1 <= TrustAccount::maxWithdrawals)
-                {
-                    this->accounts[i]->Print();
-                    i++;
-                }
-            }
-            else
-            {
-                this->accounts[i]->Print();
-            }
+            this->accounts[i]->Print();
         }
     }
     cout << endl;
@@ -180,13 +159,13 @@ void Bank::SortAndPrintForDate()
     int len = this->accounts.size();
 
     sort(this->accounts.begin(), this->accounts.end(), [](const Account *a1, const Account *a2)
-    {   return a1->dateTime.days > a2->dateTime.days; });
+    {   return a1->createDateTime.days > a2->createDateTime.days; });
 
     sort(this->accounts.begin(), this->accounts.end(), [](const Account *a1, const Account *a2)
-    {   return a1->dateTime.month > a2->dateTime.month; });
+    {   return a1->createDateTime.month > a2->createDateTime.month; });
 
     sort(this->accounts.begin(), this->accounts.end(), [](const Account *a1, const Account *a2)
-    {   return a1->dateTime.year > a2->dateTime.year; });
+    {   return a1->createDateTime.year > a2->createDateTime.year; });
 
     for (int j = 0; j < len; j++)
     {
@@ -213,90 +192,133 @@ void Bank::SortAndPrintForName()
     cout << endl;
 }
 
-void Bank::PrintHistoryForDeposit()
+// void Bank::PrintHistoryForDeposit()
+// {
+//     int len = this->accounts.size();
+//     long unsigned int i;
+//     int size = 0;
+//     cout<<"Istorija uplacivanja novca za:  "<<endl;
+//     for(int j = 0; j < len; j++)
+//     {
+//         i = 0;
+//         if ((typeid(*this->accounts[j]) == typeid(CurrentAccount)))
+//         {
+//             cout<<"CurrentAccount"<<endl;
+//             size = this->accounts[j]->historyForDeposit.size();
+//         } 
+//         else if ((typeid(*this->accounts[j]) == typeid(CreditCardAccount)))
+//         {
+//             cout<<"CreditCardAccount"<<endl;
+//             size = this->accounts[j]->historyForDeposit.size();
+//         }
+//         else if ((typeid(*this->accounts[j]) == typeid(SavingAccount)))
+//         {
+//             cout<<"SavingAccount"<<endl;
+//             size = this->accounts[j]->historyForDeposit.size();
+//         }
+//         else if ((typeid(*this->accounts[j]) == typeid(TrustAccount)))
+//         {
+//             cout<<"TrustAccount"<<endl;
+//             size = this->accounts[j]->historyForDeposit.size();
+//         }
+
+//         while (i < size && size > 0)
+//         {
+//             cout << "Uplatio je korisnik: "<< this->accounts[j]->name
+//             <<"  datuma: " <<this->accounts[j]->dateTransaction.days<<". "<< this->accounts[j]->dateTransaction.month<<". "<<this->accounts[j]->dateTransaction.year<<" "
+//             << "iznos: "<< this->accounts[j]->historyForDeposit[i] <<"  trenutno stanje na racunu: " << this->accounts[j]->historyForDepositAvailableFunds[i]<<endl;
+//             i++;
+//         }
+//     }
+//     cout<<endl;
+// }
+
+void Bank::AccountDeposit(float amound, Account &acc)
 {
+    AccountTranslation *accTranslation = new AccountTranslation;
     int len = this->accounts.size();
-    long unsigned int i;
-    int size = 0;
-    cout<<"Istorija uplacivanja novca za:  "<<endl;
     for(int j = 0; j < len; j++)
     {
-        i = 0;
-        if ((typeid(*this->accounts[j]) == typeid(CurrentAccount)))
+        if ((typeid(*this->accounts[j]) == typeid(acc)))
         {
-            cout<<"CurrentAccount"<<endl;
-            size = this->accounts[j]->historyForDeposit.size();
-        } 
-        else if ((typeid(*this->accounts[j]) == typeid(CreditCardAccount)))
-        {
-            cout<<"CreditCardAccount"<<endl;
-            size = this->accounts[j]->historyForDeposit.size();
-        }
-        else if ((typeid(*this->accounts[j]) == typeid(SavingAccount)))
-        {
-            cout<<"SavingAccount"<<endl;
-            size = this->accounts[j]->historyForDeposit.size();
-        }
-        else if ((typeid(*this->accounts[j]) == typeid(TrustAccount)))
-        {
-            cout<<"TrustAccount"<<endl;
-            size = this->accounts[j]->historyForDeposit.size();
-        }
+            if(this->accounts[j]->availableFunds == acc.availableFunds && this->accounts[j]->adress.compare(acc.adress) == 0 && this->accounts[j]->name.compare(acc.name) == 0
+            && this->accounts[j]->createDateTime.days == acc.createDateTime.days && this->accounts[j]->createDateTime.month == acc.createDateTime.month && this->accounts[j]->createDateTime.year == acc.createDateTime.year)
+            {
+                accTranslation->name = this->accounts[j]->name;
+                accTranslation->adress = this->accounts[j]->adress;
 
-        while (i < size && size > 0)
-        {
-            cout << "Uplatio je korisnik: "<< this->accounts[j]->name
-            <<"  datuma: " <<this->accounts[j]->dateTransaction.days<<". "<< this->accounts[j]->dateTransaction.month<<". "<<this->accounts[j]->dateTransaction.year<<" "
-            << "iznos: "<< this->accounts[j]->historyForDeposit[i] <<"  trenutno stanje na racunu: " << this->accounts[j]->historyForDepositAvailableFunds[i]<<endl;
-            i++;
-        }
+                accTranslation->amountMoney = amound;
+                accTranslation->availableFunds = this->accounts[j]->Deposit(amound);
+
+                time_t ttime = time(0);
+                tm *local_time = localtime(&ttime);
+                accTranslation->apdateDateTime.year  = 1900 + local_time->tm_year;
+                accTranslation->apdateDateTime.month  = 1 + local_time->tm_mon;
+                accTranslation->apdateDateTime.days = local_time->tm_mday;
+
+                this->accountTranslation.push_back(accTranslation);
+            }
+        } 
     }
 }
 
-void Bank::PrintHistoryForWithdraw()
+void Bank::AccountWithdraw(float amound, Account &acc)
 {
+    AccountTranslation *accTranslation = new AccountTranslation;
     int len = this->accounts.size();
-    int i;
-    int size;
-    cout<<"Istorija podizanja novca za:  "<<endl;
     for(int j = 0; j < len; j++)
     {
-        i = 0;
-        if ((typeid(*this->accounts[j]) == typeid(CurrentAccount)))
+        if ((typeid(*this->accounts[j]) == typeid(acc)))
         {
-            cout<<"CurrentAccount"<<endl;
-            size = this->accounts[j]->historyForWithdraw.size();
+            if(this->accounts[j]->availableFunds == acc.availableFunds && this->accounts[j]->adress.compare(acc.adress) == 0 && this->accounts[j]->name.compare(acc.name) == 0
+            && this->accounts[j]->createDateTime.days == acc.createDateTime.days && this->accounts[j]->createDateTime.month == acc.createDateTime.month && this->accounts[j]->createDateTime.year == acc.createDateTime.year)
+            {
+                accTranslation->name = this->accounts[j]->name;
+                accTranslation->adress = this->accounts[j]->adress;
+                // accTranslation->apdateDateTime.days = this->accounts[j]->dateTransaction.days;
+                // accTranslation->apdateDateTime.month = this->accounts[j]->dateTransaction.month;
+                // accTranslation->apdateDateTime.year = this->accounts[j]->dateTransaction.year;
+
+                time_t ttime = time(0);
+                tm *local_time = localtime(&ttime);
+                accTranslation->apdateDateTime.year  = 1900 + local_time->tm_year;
+                accTranslation->apdateDateTime.month  = 1 + local_time->tm_mon;
+                accTranslation->apdateDateTime.days = local_time->tm_mday;
+
+                accTranslation->amountMoney = amound;
+                accTranslation->availableFunds = this->accounts[j]->Withdraw(amound);
+
+                this->accountTranslation.push_back(accTranslation);
+            }
         } 
-        else if ((typeid(*this->accounts[j]) == typeid(CreditCardAccount)))
-        {
-            cout<<"CreditCardAccount"<<endl;
-            size = this->accounts[j]->historyForWithdraw.size();
-        }
-        else if ((typeid(*this->accounts[j]) == typeid(SavingAccount)))
-        {
-            cout<<"SavingAccount"<<endl;
-            size = this->accounts[j]->historyForWithdraw.size();
-        }
-        else if ((typeid(*this->accounts[j]) == typeid(TrustAccount)))
-        {
-            cout<<"TrustAccount"<<endl;
-            size = this->accounts[j]->historyForWithdraw.size();
-        }
-        while (i < size && size > 0)
-        {
-            cout << "Podigao je korisnik: "<< this->accounts[j]->name
-            <<"  datuma: " <<this->accounts[j]->dateTransaction.days<<". "<< this->accounts[j]->dateTransaction.month<<". "<<this->accounts[j]->dateTransaction.year<<"  "
-            <<" iznos: "<< this->accounts[j]->historyForWithdraw[i]<<"  trenutno stanje na racunu: " << this->accounts[j]->historyForWithdrawAvailableFunds[i]<<endl;
-            i++;
-        }
     }
 }
 
-void Bank::PrintBankStatement()
+void Bank::PrintTranslation()
 {
-    int len = this->bankStatement.size();
-    for(int i  = 0; i++; i < len)
+    int lenNewAcc = this->accountTranslation.size();
+    for (int i = 0; i < lenNewAcc; i++)
     {
-        cout<< "Podignuto je: "<< this->bankStatement[i]<<endl;
+        if ((typeid(*this->accounts[i]) == typeid(CurrentAccount)))
+        {
+            cout<<"CurrentAccount"<<endl;
+        } 
+        else if ((typeid(*this->accounts[i]) == typeid(CreditCardAccount)))
+        {
+            cout<<"CreditCardAccount"<<endl;
+        }
+        else if ((typeid(*this->accounts[i]) == typeid(SavingAccount)))
+        {
+            cout<<"SavingAccount"<<endl;
+        }
+        else if ((typeid(*this->accounts[i]) == typeid(TrustAccount)))
+        {
+            cout<<"TrustAccount"<<endl;
+        }
+
+        cout << "Podigao je korisnik: "<< this->accountTranslation[i]->name
+        <<"  datuma: " <<this->accountTranslation[i]->apdateDateTime.days<<". "<<this->accountTranslation[i]->apdateDateTime.month<<". "<<this->accountTranslation[i]->apdateDateTime.year<<"  "
+        <<" iznos: "<<this->accountTranslation[i]->amountMoney <<"  trenutno stanje na racunu: " << this->accountTranslation[i]->availableFunds<<endl;
+        cout<<endl;
     }
 }

@@ -2,6 +2,18 @@
 	"entries" : 
 	[
 		{
+			"name" : "AccountTranslation_LIB_DEPENDS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Dependencies for the target"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "general;Bank;general;CreditCardAccount;general;CurrentAccount;general;SavingsAccount;general;TrustAccount;"
+		},
+		{
 			"name" : "Bank_LIB_DEPENDS",
 			"properties" : 
 			[
@@ -1152,18 +1164,6 @@
 			],
 			"type" : "PATH",
 			"value" : ""
-		},
-		{
-			"name" : "History_LIB_DEPENDS",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Dependencies for the target"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "general;Bank;general;CreditCardAccount;general;CurrentAccount;general;SavingsAccount;general;TrustAccount;"
 		},
 		{
 			"name" : "LIBRARY_OUTPUT_PATH",

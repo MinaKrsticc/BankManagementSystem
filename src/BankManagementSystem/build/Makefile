@@ -130,6 +130,19 @@ main/fast:
 .PHONY : main/fast
 
 #=============================================================================
+# Target rules for targets named AccountTranslation
+
+# Build rule for target.
+AccountTranslation: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 AccountTranslation
+.PHONY : AccountTranslation
+
+# fast build rule for target.
+AccountTranslation/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AccountTranslation.dir/build.make CMakeFiles/AccountTranslation.dir/build
+.PHONY : AccountTranslation/fast
+
+#=============================================================================
 # Target rules for targets named Bank
 
 # Build rule for target.
@@ -195,6 +208,21 @@ CreditCardAccount/fast:
 .PHONY : CreditCardAccount/fast
 
 # target to build an object file
+AccountTranslation.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AccountTranslation.dir/build.make CMakeFiles/AccountTranslation.dir/AccountTranslation.o
+.PHONY : AccountTranslation.o
+
+# target to preprocess a source file
+AccountTranslation.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AccountTranslation.dir/build.make CMakeFiles/AccountTranslation.dir/AccountTranslation.i
+.PHONY : AccountTranslation.i
+
+# target to generate assembly for a file
+AccountTranslation.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AccountTranslation.dir/build.make CMakeFiles/AccountTranslation.dir/AccountTranslation.s
+.PHONY : AccountTranslation.s
+
+# target to build an object file
 Bank.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bank.dir/build.make CMakeFiles/Bank.dir/Bank.o
 .PHONY : Bank.o
@@ -232,12 +260,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... AccountTranslation"
 	@echo "... Bank"
 	@echo "... CreditCardAccount"
 	@echo "... CurrentAccount"
 	@echo "... SavingsAccount"
 	@echo "... TrustAccount"
 	@echo "... main"
+	@echo "... AccountTranslation.o"
+	@echo "... AccountTranslation.i"
+	@echo "... AccountTranslation.s"
 	@echo "... Bank.o"
 	@echo "... Bank.i"
 	@echo "... Bank.s"

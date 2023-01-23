@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/syrmia/BankManagementSystem /src/BankManagementSystem/History.cpp" "CMakeFiles/History.dir/History.o" "gcc" "CMakeFiles/History.dir/History.o.d"
+  "/home/syrmia/BankManagementSystem /src/BankManagementSystem/AccountTranslation.cpp" "CMakeFiles/AccountTranslation.dir/AccountTranslation.o" "gcc" "CMakeFiles/AccountTranslation.dir/AccountTranslation.o.d"
   )
 
 # Targets to which this target links.

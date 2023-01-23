@@ -1,2 +1,2 @@
-# Empty dependencies file for History.
+# Empty dependencies file for AccountTranslation.
 # This may be replaced when dependencies are built.

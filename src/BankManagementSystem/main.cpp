@@ -42,27 +42,27 @@ int main()
     CreditCardAccount creditA(datumm, imee, adresaa, 12000.0, 5000.0, 50000.0);
     TrustAccount trstAcc(datum, ime, adresa, 50000);
 
-    Account &cur = curAcc;
-    cur.Deposit(2000);
-    cur.Deposit(12000);
-    cur.Withdraw(1500);
-    Account &credit = creditAcc;
-    credit.Withdraw(10000);
-    credit.Withdraw(50000);
-    credit.Withdraw(5000);
-    credit.Withdraw(5000);
-    credit.Withdraw(7000);
-    Account &saveing = saveAcc;
-    saveing.Deposit(1000);
-    saveing.Withdraw(5000);
-    saveing.Withdraw(5000);
-    saveing.Withdraw(5000);
-    saveing.Withdraw(5000);
-    Account &trust = trstAcc;
-    trust.Withdraw(30000);
-    trust.Withdraw(30000);
-    Account &creditacc = creditA;
-    creditacc.Withdraw(13000);
+    // Account &cur = curAcc;
+    // cur.Deposit(2000);
+    // cur.Deposit(12000);
+    // cur.Withdraw(1500);
+    // Account &credit = creditAcc;
+    // credit.Withdraw(10000);
+    // credit.Withdraw(50000);
+    // credit.Withdraw(5000);
+    // credit.Withdraw(5000);
+    // credit.Withdraw(7000);
+    // Account &saveing = saveAcc;
+    // saveing.Deposit(1000);
+    // saveing.Withdraw(5000);
+    // saveing.Withdraw(5000);
+    // saveing.Withdraw(5000);
+    // saveing.Withdraw(5000);
+    // Account &trust = trstAcc;
+    // trust.Withdraw(30000);
+    // trust.Withdraw(30000);
+    // Account &creditacc = creditA;
+    // creditacc.Withdraw(13000);
 
     Bank banka{};
     banka.OpenAccount(creditA);
@@ -71,19 +71,28 @@ int main()
     banka.OpenAccount(curAccount);
     banka.OpenAccount(curAcc);
     banka.OpenAccount(saveAcc);
-    // banka.Print();
+
+    Account &trust = trstAcc;
+    Account &cur = curAcc;
+    Account &credit = creditAcc;
+
+    banka.AccountDeposit(2000, trust);
+    banka.AccountDeposit(12000, cur);
+    banka.AccountWithdraw(27000, creditAcc);
+    banka.AccountWithdraw(5000, saveAcc);
+    banka.AccountWithdraw(6000, saveAcc);
+    banka.AccountWithdraw(3000, saveAcc);
+
     banka.StatisticOfAccount();
     banka.FundsAvailable(5000);
     banka.AvailableMinus();
     banka.AvaibleForWithdraw();
     //banka.CloseAccount(curAcc);
-   // banka.Print();
     banka.SortAndPrintForAmount();
     banka.SortAndPrintForDate();
     banka.SortAndPrintForName();
-    banka.PrintHistoryForWithdraw();
-    banka.PrintHistoryForDeposit();
-    banka.PrintBankStatement();
+ 
+    banka.PrintTranslation();
 
     // CurrentAccount curAcca(datumm, adresa, ime, 10000.0, 15000);
     // CurrentAccount curAccounts(datum, adresac, imec, 10000.0, 15000);

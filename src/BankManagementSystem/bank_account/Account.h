@@ -19,22 +19,19 @@ namespace bank_account
         string name;
         string adress;
         float availableFunds;
-        Date dateTime;
+        Date createDateTime;
         Date dateTransaction;
         int countWithdrawals = 0;
         
-        vector<float> historyForDeposit;
-        vector<float> historyForWithdraw;
-        vector<float> historyForDepositAvailableFunds;
-        vector<float> historyForWithdrawAvailableFunds;
-
     public:
         virtual float Deposit(float amountMoney) = 0;
         virtual float Withdraw(float amountMoney) = 0;
-        virtual void CurrentDate() = 0;
+        virtual void ApdateDate() = 0;
         virtual void Print() = 0;
+        virtual bool FundsAvailableOnAccount(float amound) = 0;
+        virtual bool AvailableMinusOnAccount() = 0;
+        virtual bool AvaibleForWithdrawOnAccount() = 0;
         Account() = default;
         ~Account(){};
-
     };
 }

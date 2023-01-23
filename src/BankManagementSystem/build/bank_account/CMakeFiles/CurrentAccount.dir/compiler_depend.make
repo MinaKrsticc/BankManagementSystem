@@ -182,6 +182,7 @@ bank_account/CMakeFiles/CurrentAccount.dir/CurrentAccount.o: ../bank_account/Cur
   /usr/include/c++/9/bits/ostream.tcc \
   /usr/include/c++/9/istream \
   /usr/include/c++/9/bits/istream.tcc \
+  ../AccountTranslation.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h \
   /usr/include/c++/9/cassert \
   /usr/include/assert.h \
@@ -497,6 +498,8 @@ bank_account/CMakeFiles/CurrentAccount.dir/CurrentAccount.o: ../bank_account/Cur
 
 /usr/include/c++/9/bits/algorithmfwd.h:
 
+/usr/include/c++/9/bits/stl_algo.h:
+
 /usr/include/c++/9/tuple:
 
 /usr/include/c++/9/bits/stl_function.h:
@@ -743,8 +746,6 @@ bank_account/CMakeFiles/CurrentAccount.dir/CurrentAccount.o: ../bank_account/Cur
 
 /usr/include/c++/9/type_traits:
 
-/usr/include/c++/9/bits/stl_algo.h:
-
 /usr/include/c++/9/cctype:
 
 /usr/include/c++/9/bits/predefined_ops.h:
@@ -890,6 +891,8 @@ bank_account/CMakeFiles/CurrentAccount.dir/CurrentAccount.o: ../bank_account/Cur
 /usr/include/stdlib.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
+
+../AccountTranslation.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 

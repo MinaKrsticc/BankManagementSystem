@@ -1,5 +1,5 @@
-CMakeFiles/History.dir/History.o: \
- /home/syrmia/BankManagementSystem /src/BankManagementSystem/History.cpp \
+CMakeFiles/AccountTranslation.dir/AccountTranslation.o: \
+ /home/syrmia/BankManagementSystem /src/BankManagementSystem/AccountTranslation.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/9/vector \
  /usr/include/c++/9/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
@@ -144,6 +144,7 @@ CMakeFiles/History.dir/History.o: \
  /usr/include/c++/9/bits/basic_ios.tcc \
  /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/istream \
  /usr/include/c++/9/bits/istream.tcc \
+ /home/syrmia/BankManagementSystem /src/BankManagementSystem/AccountTranslation.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h \
  /usr/include/c++/9/cassert /usr/include/assert.h \
  /usr/include/c++/9/cfloat \

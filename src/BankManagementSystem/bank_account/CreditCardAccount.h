@@ -17,8 +17,10 @@ namespace bank_account
         ~CreditCardAccount();
         float Deposit(float amountMoney) override;
         float Withdraw(float amountMoney) override;
-        void CurrentDate() override;
-
+        void ApdateDate() override;
+        bool FundsAvailableOnAccount(float amound) override;
         void Print() override;
+        bool AvailableMinusOnAccount() override;
+        bool AvaibleForWithdrawOnAccount() override;
     };
 }

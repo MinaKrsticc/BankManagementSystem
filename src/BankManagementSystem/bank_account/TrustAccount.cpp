@@ -13,9 +13,9 @@ namespace bank_account
         this->name = "";
         this->availableFunds = 1000;
         this->minimumFunds = this->availableFunds * 0.3;
-        this->dateTime.days = 1;
-        this->dateTime.month = 1;
-        this->dateTime.year = 2022;
+        this->createDateTime.days = 1;
+        this->createDateTime.month = 1;
+        this->createDateTime.year = 2022;
         this->countWithdrawals = 0;
     }
 
@@ -23,9 +23,9 @@ namespace bank_account
     {
         this->name = nameUser;
         this->adress = adressUser;
-        this->dateTime.days = creationData.days;
-        this->dateTime.month = creationData.month;
-        this->dateTime.year = creationData.year;
+        this->createDateTime.days = creationData.days;
+        this->createDateTime.month = creationData.month;
+        this->createDateTime.year = creationData.year;
         this->availableFunds = amountMoney;
         this->minimumFunds = this->availableFunds * 0.3;
         this->countWithdrawals = 0;
@@ -37,13 +37,9 @@ namespace bank_account
 
     float TrustAccount::Deposit(float amountMoney)
     {
-        CurrentDate();
         this->availableFunds = this->availableFunds + amountMoney;
 
-        this->historyForDepositAvailableFunds.push_back(this->availableFunds);
-        this->historyForDeposit.push_back(amountMoney);
-
-        Bank::bankStatement.push_back(amountMoney);
+        ApdateDate();
         return this->availableFunds;
     }
 
@@ -59,11 +55,8 @@ namespace bank_account
                 {
                     this->countWithdrawals++;
                     this->availableFunds = remainingFounds;
-                    this->historyForWithdrawAvailableFunds.push_back(this->availableFunds);
-                    this->historyForWithdraw.push_back(amountMoney);
 
-                    Bank::bankStatement.push_back(amountMoney);
-                    CurrentDate();
+                    ApdateDate();
                 }
                 else
                 {
@@ -89,16 +82,45 @@ namespace bank_account
         cout << this->adress <<endl;
         cout << this->availableFunds<<endl;
         cout << "countWithdrawals  "<< this->countWithdrawals<<endl;
-        cout<< this->dateTime.days << ". " << this->dateTime.month << ". " << this->dateTime.year << endl;
+        cout<< this->createDateTime.days << ". " << this->createDateTime.month << ". " << this->createDateTime.year << endl;
         cout<< "TrustAccount" <<endl;
     }
 
-    void TrustAccount::CurrentDate()
+    void TrustAccount::ApdateDate()
     {
         time_t ttime = time(0);
         tm *local_time = localtime(&ttime);
         this->dateTransaction.year = 1900 + local_time->tm_year;
         this->dateTransaction.month = 1 + local_time->tm_mon;
         this->dateTransaction.days = local_time->tm_mday;
+    }
+
+    bool TrustAccount::FundsAvailableOnAccount(float amound)
+    {
+       if(this->availableFunds >= amound)
+       {
+            return true;
+       } 
+       else
+       {
+            return false;
+       }
+    }
+
+    bool TrustAccount::AvailableMinusOnAccount()
+    {
+        return false;
+    }
+
+    bool TrustAccount::AvaibleForWithdrawOnAccount()
+    {
+        if (this->availableFunds > 0 && this->countWithdrawals + 1 <= this->maxWithdrawals)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

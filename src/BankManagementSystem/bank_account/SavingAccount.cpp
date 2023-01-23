@@ -15,13 +15,12 @@ namespace bank_account
         this->adress = "";
         this->name = "";
         this->availableFunds = 0;
-        this->dateTime.days = 1;
-        this->dateTime.month = 1;
-        this->dateTime.year = 2022;
+        this->createDateTime.days = 1;
+        this->createDateTime.month = 1;
+        this->createDateTime.year = 2022;
         this->interestRate = 0.03;
         this->countWithdrawals = 0;
         this->countWithdrawals++;
-
     }
 
     SavingAccount::~SavingAccount()
@@ -33,9 +32,9 @@ namespace bank_account
         this->adress = userAdress;
         this->name = userName;
         this->interestRate = 0.03;
-        this->dateTime.days = creationDate.days;
-        this->dateTime.month = creationDate.month;
-        this->dateTime.year = creationDate.year;
+        this->createDateTime.days = creationDate.days;
+        this->createDateTime.month = creationDate.month;
+        this->createDateTime.year = creationDate.year;
         this->availableFunds = userAmountMoney;
         this->minimumFunds = userMinimumFunds;
         this->countWithdrawals = 0;
@@ -46,22 +45,19 @@ namespace bank_account
         cout << this->name << endl;
         cout << this->adress << endl;
         cout << this->availableFunds << endl;
-        cout << "countWithdrawals  "<< this->countWithdrawals<<endl;
+        cout << "countWithdrawals  " << this->countWithdrawals << endl;
         cout << "SavingAccount:  Kamata je  " << this->interestRate << endl;
-        cout << this->dateTime.days <<  ". " << this->dateTime.month << ". " << this->dateTime.year << endl;
+        cout << this->createDateTime.days << ". " << this->createDateTime.month << ". " << this->createDateTime.year << endl;
         cout << "SavingAccount" << endl;
     }
 
     float SavingAccount::Deposit(float amountMoney)
     {
-        CurrentDate();
+        ApdateDate();
         this->availableFunds = this->availableFunds + amountMoney + (amountMoney * this->interestRate);
 
-        this->historyForDepositAvailableFunds.push_back(this->availableFunds);
-        this->historyForDeposit.push_back(amountMoney);
-        CurrentDate();
+        ApdateDate();
 
-        Bank::bankStatement.push_back(amountMoney);
         return this->availableFunds;
     }
 
@@ -77,11 +73,8 @@ namespace bank_account
                 {
                     this->countWithdrawals++;
                     this->availableFunds = remainingFounds;
-                    this->historyForWithdraw.push_back(amountMoney);
-                    this->historyForWithdrawAvailableFunds.push_back(this->availableFunds);
-                    
-                    Bank::bankStatement.push_back(amountMoney);
-                    CurrentDate();
+
+                    ApdateDate();
                 }
                 else
                 {
@@ -101,12 +94,41 @@ namespace bank_account
         return this->availableFunds;
     }
 
-    void SavingAccount::CurrentDate()
+    void SavingAccount::ApdateDate()
     {
         time_t ttime = time(0);
         tm *local_time = localtime(&ttime);
         this->dateTransaction.year = 1900 + local_time->tm_year;
         this->dateTransaction.month = 1 + local_time->tm_mon;
         this->dateTransaction.days = local_time->tm_mday;
+    }
+
+    bool SavingAccount::FundsAvailableOnAccount(float amound)
+    {
+        if (this->availableFunds >= amound)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    bool SavingAccount::AvailableMinusOnAccount()
+    {
+        return false;
+    }
+
+    bool SavingAccount::AvaibleForWithdrawOnAccount()
+    {
+        if (this->availableFunds > 0 && this->countWithdrawals + 1 <= this->maxWithdrawals)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

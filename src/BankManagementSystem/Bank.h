@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include "bank_account/Account.h"
+#include "AccountTranslation.h"
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -9,11 +10,11 @@ using namespace bank_account;
 class Bank
 {
 private:
-    vector<Account *> accounts;
+    vector<Account*> accounts;
 
 public:
-    static vector<float> bankStatement;
-
+    vector<AccountTranslation*> accountTranslation;
+    
     Bank();
     ~Bank();
     void OpenAccount(Account &acc);
@@ -26,8 +27,8 @@ public:
     void SortAndPrintForAmount();
     void SortAndPrintForDate();
     void SortAndPrintForName();
-    void PrintHistoryForWithdraw();
-    void PrintHistoryForDeposit();
 
-    void PrintBankStatement();
+    void AccountDeposit(float amound, Account &acc);
+    void AccountWithdraw(float amound, Account &acc);
+    void PrintTranslation();
 };
