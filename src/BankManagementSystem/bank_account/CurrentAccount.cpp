@@ -35,8 +35,6 @@ namespace bank_account
     float CurrentAccount::Deposit(float amountMoney)
     {
         this->availableFunds = this->availableFunds + amountMoney;
-
-        ApdateDate();
         return this->availableFunds;
     }
 
@@ -47,8 +45,6 @@ namespace bank_account
             if (amountMoney <= this->limitMoney)
             {
                 this->availableFunds = this->availableFunds - amountMoney;
-
-                ApdateDate();
             }
             else
             {
@@ -66,15 +62,6 @@ namespace bank_account
         cout<< this->availableFunds <<endl;
         cout<< this->createDateTime.days << ". " << this->createDateTime.month << ". " << this->createDateTime.year <<endl;
         cout<< "CurrentAccount" << endl;
-    }
-
-    void CurrentAccount::ApdateDate()
-    {
-        time_t ttime = time(0);
-        tm *local_time = localtime(&ttime);
-        this->dateTransaction.year = 1900 + local_time->tm_year;
-        this->dateTransaction.month = 1 + local_time->tm_mon;
-        this->dateTransaction.days = local_time->tm_mday;
     }
 
     bool CurrentAccount::FundsAvailableOnAccount(float amound)

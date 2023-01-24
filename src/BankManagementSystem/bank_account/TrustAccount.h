@@ -7,7 +7,7 @@ namespace bank_account
     class TrustAccount : public Account
     {
     public:
-        // int countWithdrawals;// brojac koliko puta smo podigli novac
+        // int countWithdrawals; // brojac koliko puta smo podigli novac
         static const int maxWithdrawals = 3; 
         float minimumFunds;
 
@@ -17,7 +17,6 @@ namespace bank_account
         float Deposit(float amountMoney) override;
         float Withdraw(float amountMoney) override;
         void Print() override;
-        void ApdateDate() override;
         TrustAccount(Date creationDate, string nameUser, string adressUser, float amountMoney);
         bool FundsAvailableOnAccount(float amound) override;
         bool AvailableMinusOnAccount() override;

@@ -39,7 +39,6 @@ namespace bank_account
     {
         this->availableFunds = this->availableFunds + amountMoney;
 
-        ApdateDate();
         return this->availableFunds;
     }
 
@@ -55,8 +54,6 @@ namespace bank_account
                 {
                     this->countWithdrawals++;
                     this->availableFunds = remainingFounds;
-
-                    ApdateDate();
                 }
                 else
                 {
@@ -84,15 +81,6 @@ namespace bank_account
         cout << "countWithdrawals  "<< this->countWithdrawals<<endl;
         cout<< this->createDateTime.days << ". " << this->createDateTime.month << ". " << this->createDateTime.year << endl;
         cout<< "TrustAccount" <<endl;
-    }
-
-    void TrustAccount::ApdateDate()
-    {
-        time_t ttime = time(0);
-        tm *local_time = localtime(&ttime);
-        this->dateTransaction.year = 1900 + local_time->tm_year;
-        this->dateTransaction.month = 1 + local_time->tm_mon;
-        this->dateTransaction.days = local_time->tm_mday;
     }
 
     bool TrustAccount::FundsAvailableOnAccount(float amound)

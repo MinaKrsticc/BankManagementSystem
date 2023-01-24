@@ -2,7 +2,7 @@
 #include <string.h>
 #include <typeinfo>
 #include "Bank.h"
-#include "AccountTranslation.h"
+#include "AccountTransaction.h"
 #include <bits/stdc++.h>
 #include "bank_account/Account.h"
 #include "bank_account/CurrentAccount.h"
@@ -191,47 +191,6 @@ void Bank::SortAndPrintForName()
     cout << "SortAndPrintForName" << endl;
     cout << endl;
 }
-
-// void Bank::PrintHistoryForDeposit()
-// {
-//     int len = this->accounts.size();
-//     long unsigned int i;
-//     int size = 0;
-//     cout<<"Istorija uplacivanja novca za:  "<<endl;
-//     for(int j = 0; j < len; j++)
-//     {
-//         i = 0;
-//         if ((typeid(*this->accounts[j]) == typeid(CurrentAccount)))
-//         {
-//             cout<<"CurrentAccount"<<endl;
-//             size = this->accounts[j]->historyForDeposit.size();
-//         } 
-//         else if ((typeid(*this->accounts[j]) == typeid(CreditCardAccount)))
-//         {
-//             cout<<"CreditCardAccount"<<endl;
-//             size = this->accounts[j]->historyForDeposit.size();
-//         }
-//         else if ((typeid(*this->accounts[j]) == typeid(SavingAccount)))
-//         {
-//             cout<<"SavingAccount"<<endl;
-//             size = this->accounts[j]->historyForDeposit.size();
-//         }
-//         else if ((typeid(*this->accounts[j]) == typeid(TrustAccount)))
-//         {
-//             cout<<"TrustAccount"<<endl;
-//             size = this->accounts[j]->historyForDeposit.size();
-//         }
-
-//         while (i < size && size > 0)
-//         {
-//             cout << "Uplatio je korisnik: "<< this->accounts[j]->name
-//             <<"  datuma: " <<this->accounts[j]->dateTransaction.days<<". "<< this->accounts[j]->dateTransaction.month<<". "<<this->accounts[j]->dateTransaction.year<<" "
-//             << "iznos: "<< this->accounts[j]->historyForDeposit[i] <<"  trenutno stanje na racunu: " << this->accounts[j]->historyForDepositAvailableFunds[i]<<endl;
-//             i++;
-//         }
-//     }
-//     cout<<endl;
-// }
 
 void Bank::AccountDeposit(float amound, Account &acc)
 {

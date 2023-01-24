@@ -42,28 +42,6 @@ int main()
     CreditCardAccount creditA(datumm, imee, adresaa, 12000.0, 5000.0, 50000.0);
     TrustAccount trstAcc(datum, ime, adresa, 50000);
 
-    // Account &cur = curAcc;
-    // cur.Deposit(2000);
-    // cur.Deposit(12000);
-    // cur.Withdraw(1500);
-    // Account &credit = creditAcc;
-    // credit.Withdraw(10000);
-    // credit.Withdraw(50000);
-    // credit.Withdraw(5000);
-    // credit.Withdraw(5000);
-    // credit.Withdraw(7000);
-    // Account &saveing = saveAcc;
-    // saveing.Deposit(1000);
-    // saveing.Withdraw(5000);
-    // saveing.Withdraw(5000);
-    // saveing.Withdraw(5000);
-    // saveing.Withdraw(5000);
-    // Account &trust = trstAcc;
-    // trust.Withdraw(30000);
-    // trust.Withdraw(30000);
-    // Account &creditacc = creditA;
-    // creditacc.Withdraw(13000);
-
     Bank banka{};
     banka.OpenAccount(creditA);
     banka.OpenAccount(trstAcc);
@@ -87,7 +65,7 @@ int main()
     banka.FundsAvailable(5000);
     banka.AvailableMinus();
     banka.AvaibleForWithdraw();
-    //banka.CloseAccount(curAcc);
+    banka.CloseAccount(curAcc);
     banka.SortAndPrintForAmount();
     banka.SortAndPrintForDate();
     banka.SortAndPrintForName();

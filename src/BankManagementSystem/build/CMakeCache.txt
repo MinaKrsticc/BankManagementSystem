@@ -15,6 +15,9 @@
 ########################
 
 //Dependencies for the target
+AccountTransaction_LIB_DEPENDS:STATIC=general;Bank;general;CreditCardAccount;general;CurrentAccount;general;SavingsAccount;general;TrustAccount;
+
+//Dependencies for the target
 AccountTranslation_LIB_DEPENDS:STATIC=general;Bank;general;CreditCardAccount;general;CurrentAccount;general;SavingsAccount;general;TrustAccount;
 
 //Dependencies for the target

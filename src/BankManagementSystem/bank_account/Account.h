@@ -21,12 +21,11 @@ namespace bank_account
         float availableFunds;
         Date createDateTime;
         Date dateTransaction;
-        int countWithdrawals = 0;
+        int countWithdrawals = 0; // brojac koliko puta smo podigli novac
         
     public:
         virtual float Deposit(float amountMoney) = 0;
         virtual float Withdraw(float amountMoney) = 0;
-        virtual void ApdateDate() = 0;
         virtual void Print() = 0;
         virtual bool FundsAvailableOnAccount(float amound) = 0;
         virtual bool AvailableMinusOnAccount() = 0;

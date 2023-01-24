@@ -130,17 +130,17 @@ main/fast:
 .PHONY : main/fast
 
 #=============================================================================
-# Target rules for targets named AccountTranslation
+# Target rules for targets named AccountTransaction
 
 # Build rule for target.
-AccountTranslation: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 AccountTranslation
-.PHONY : AccountTranslation
+AccountTransaction: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 AccountTransaction
+.PHONY : AccountTransaction
 
 # fast build rule for target.
-AccountTranslation/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AccountTranslation.dir/build.make CMakeFiles/AccountTranslation.dir/build
-.PHONY : AccountTranslation/fast
+AccountTransaction/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AccountTransaction.dir/build.make CMakeFiles/AccountTransaction.dir/build
+.PHONY : AccountTransaction/fast
 
 #=============================================================================
 # Target rules for targets named Bank
@@ -208,19 +208,19 @@ CreditCardAccount/fast:
 .PHONY : CreditCardAccount/fast
 
 # target to build an object file
-AccountTranslation.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AccountTranslation.dir/build.make CMakeFiles/AccountTranslation.dir/AccountTranslation.o
-.PHONY : AccountTranslation.o
+AccountTransaction.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AccountTransaction.dir/build.make CMakeFiles/AccountTransaction.dir/AccountTransaction.o
+.PHONY : AccountTransaction.o
 
 # target to preprocess a source file
-AccountTranslation.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AccountTranslation.dir/build.make CMakeFiles/AccountTranslation.dir/AccountTranslation.i
-.PHONY : AccountTranslation.i
+AccountTransaction.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AccountTransaction.dir/build.make CMakeFiles/AccountTransaction.dir/AccountTransaction.i
+.PHONY : AccountTransaction.i
 
 # target to generate assembly for a file
-AccountTranslation.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AccountTranslation.dir/build.make CMakeFiles/AccountTranslation.dir/AccountTranslation.s
-.PHONY : AccountTranslation.s
+AccountTransaction.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AccountTransaction.dir/build.make CMakeFiles/AccountTransaction.dir/AccountTransaction.s
+.PHONY : AccountTransaction.s
 
 # target to build an object file
 Bank.o:
@@ -260,16 +260,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... AccountTranslation"
+	@echo "... AccountTransaction"
 	@echo "... Bank"
 	@echo "... CreditCardAccount"
 	@echo "... CurrentAccount"
 	@echo "... SavingsAccount"
 	@echo "... TrustAccount"
 	@echo "... main"
-	@echo "... AccountTranslation.o"
-	@echo "... AccountTranslation.i"
-	@echo "... AccountTranslation.s"
+	@echo "... AccountTransaction.o"
+	@echo "... AccountTransaction.i"
+	@echo "... AccountTransaction.s"
 	@echo "... Bank.o"
 	@echo "... Bank.i"
 	@echo "... Bank.s"

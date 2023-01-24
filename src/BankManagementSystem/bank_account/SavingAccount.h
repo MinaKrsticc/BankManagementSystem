@@ -19,7 +19,6 @@ namespace bank_account
         ~SavingAccount();
         float Deposit(float amountMoney) override;
         float Withdraw(float amountMoney) override;
-        void ApdateDate() override;
         void Print() override;
         bool FundsAvailableOnAccount(float amound) override;
         bool AvailableMinusOnAccount() override;

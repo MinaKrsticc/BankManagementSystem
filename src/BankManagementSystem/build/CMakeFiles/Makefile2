@@ -64,7 +64,7 @@ CMAKE_BINARY_DIR = /home/syrmia/BankManagementSystem /src/BankManagementSystem/
 
 # The main recursive "all" target.
 all: CMakeFiles/main.dir/all
-all: CMakeFiles/AccountTranslation.dir/all
+all: CMakeFiles/AccountTransaction.dir/all
 all: CMakeFiles/Bank.dir/all
 all: bank_account/all
 .PHONY : all
@@ -75,7 +75,7 @@ preinstall: bank_account/preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/main.dir/clean
-clean: CMakeFiles/AccountTranslation.dir/clean
+clean: CMakeFiles/AccountTransaction.dir/clean
 clean: CMakeFiles/Bank.dir/clean
 clean: bank_account/clean
 .PHONY : clean
@@ -105,7 +105,7 @@ bank_account/clean: bank_account/CMakeFiles/CreditCardAccount.dir/clean
 # Target rules for target CMakeFiles/main.dir
 
 # All Build rule for target.
-CMakeFiles/main.dir/all: CMakeFiles/AccountTranslation.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/AccountTransaction.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/Bank.dir/all
 CMakeFiles/main.dir/all: bank_account/CMakeFiles/TrustAccount.dir/all
 CMakeFiles/main.dir/all: bank_account/CMakeFiles/SavingsAccount.dir/all
@@ -133,34 +133,34 @@ CMakeFiles/main.dir/clean:
 .PHONY : CMakeFiles/main.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/AccountTranslation.dir
+# Target rules for target CMakeFiles/AccountTransaction.dir
 
 # All Build rule for target.
-CMakeFiles/AccountTranslation.dir/all: CMakeFiles/Bank.dir/all
-CMakeFiles/AccountTranslation.dir/all: bank_account/CMakeFiles/TrustAccount.dir/all
-CMakeFiles/AccountTranslation.dir/all: bank_account/CMakeFiles/SavingsAccount.dir/all
-CMakeFiles/AccountTranslation.dir/all: bank_account/CMakeFiles/CurrentAccount.dir/all
-CMakeFiles/AccountTranslation.dir/all: bank_account/CMakeFiles/CreditCardAccount.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AccountTranslation.dir/build.make CMakeFiles/AccountTranslation.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AccountTranslation.dir/build.make CMakeFiles/AccountTranslation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles --progress-num=1,2 "Built target AccountTranslation"
-.PHONY : CMakeFiles/AccountTranslation.dir/all
+CMakeFiles/AccountTransaction.dir/all: CMakeFiles/Bank.dir/all
+CMakeFiles/AccountTransaction.dir/all: bank_account/CMakeFiles/TrustAccount.dir/all
+CMakeFiles/AccountTransaction.dir/all: bank_account/CMakeFiles/SavingsAccount.dir/all
+CMakeFiles/AccountTransaction.dir/all: bank_account/CMakeFiles/CurrentAccount.dir/all
+CMakeFiles/AccountTransaction.dir/all: bank_account/CMakeFiles/CreditCardAccount.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AccountTransaction.dir/build.make CMakeFiles/AccountTransaction.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AccountTransaction.dir/build.make CMakeFiles/AccountTransaction.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles --progress-num=1,2 "Built target AccountTransaction"
+.PHONY : CMakeFiles/AccountTransaction.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/AccountTranslation.dir/rule: cmake_check_build_system
+CMakeFiles/AccountTransaction.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles 12
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/AccountTranslation.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/AccountTransaction.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/syrmia/BankManagementSystem /src/BankManagementSystem/build/CMakeFiles 0
-.PHONY : CMakeFiles/AccountTranslation.dir/rule
+.PHONY : CMakeFiles/AccountTransaction.dir/rule
 
 # Convenience name for target.
-AccountTranslation: CMakeFiles/AccountTranslation.dir/rule
-.PHONY : AccountTranslation
+AccountTransaction: CMakeFiles/AccountTransaction.dir/rule
+.PHONY : AccountTransaction
 
 # clean rule for target.
-CMakeFiles/AccountTranslation.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AccountTranslation.dir/build.make CMakeFiles/AccountTranslation.dir/clean
-.PHONY : CMakeFiles/AccountTranslation.dir/clean
+CMakeFiles/AccountTransaction.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AccountTransaction.dir/build.make CMakeFiles/AccountTransaction.dir/clean
+.PHONY : CMakeFiles/AccountTransaction.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/Bank.dir

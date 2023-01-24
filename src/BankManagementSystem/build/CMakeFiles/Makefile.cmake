@@ -46,7 +46,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/main.dir/DependInfo.cmake"
-  "CMakeFiles/AccountTranslation.dir/DependInfo.cmake"
+  "CMakeFiles/AccountTransaction.dir/DependInfo.cmake"
   "CMakeFiles/Bank.dir/DependInfo.cmake"
   "bank_account/CMakeFiles/TrustAccount.dir/DependInfo.cmake"
   "bank_account/CMakeFiles/SavingsAccount.dir/DependInfo.cmake"

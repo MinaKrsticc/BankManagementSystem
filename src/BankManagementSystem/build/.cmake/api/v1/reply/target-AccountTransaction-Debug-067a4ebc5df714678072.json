@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "libAccountTranslation.a"
+			"path" : "libAccountTransaction.a"
 		}
 	],
 	"backtrace" : 1,
@@ -90,9 +90,9 @@
 			"id" : "CreditCardAccount::@d73c3b4dc4429be0b0b5"
 		}
 	],
-	"id" : "AccountTranslation::@6890427a1f51a3e7e1df",
-	"name" : "AccountTranslation",
-	"nameOnDisk" : "libAccountTranslation.a",
+	"id" : "AccountTransaction::@6890427a1f51a3e7e1df",
+	"name" : "AccountTransaction",
+	"nameOnDisk" : "libAccountTransaction.a",
 	"paths" : 
 	{
 		"build" : ".",
@@ -113,7 +113,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "AccountTranslation.cpp",
+			"path" : "AccountTransaction.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

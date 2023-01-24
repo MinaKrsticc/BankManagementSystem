@@ -53,11 +53,7 @@ namespace bank_account
 
     float SavingAccount::Deposit(float amountMoney)
     {
-        ApdateDate();
         this->availableFunds = this->availableFunds + amountMoney + (amountMoney * this->interestRate);
-
-        ApdateDate();
-
         return this->availableFunds;
     }
 
@@ -74,7 +70,6 @@ namespace bank_account
                     this->countWithdrawals++;
                     this->availableFunds = remainingFounds;
 
-                    ApdateDate();
                 }
                 else
                 {
@@ -92,15 +87,6 @@ namespace bank_account
         }
 
         return this->availableFunds;
-    }
-
-    void SavingAccount::ApdateDate()
-    {
-        time_t ttime = time(0);
-        tm *local_time = localtime(&ttime);
-        this->dateTransaction.year = 1900 + local_time->tm_year;
-        this->dateTransaction.month = 1 + local_time->tm_mon;
-        this->dateTransaction.days = local_time->tm_mday;
     }
 
     bool SavingAccount::FundsAvailableOnAccount(float amound)

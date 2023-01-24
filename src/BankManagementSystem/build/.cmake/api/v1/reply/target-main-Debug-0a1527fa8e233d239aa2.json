@@ -70,7 +70,7 @@
 	[
 		{
 			"backtrace" : 2,
-			"id" : "AccountTranslation::@6890427a1f51a3e7e1df"
+			"id" : "AccountTransaction::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 2,
@@ -142,7 +142,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "libAccountTranslation.a",
+				"fragment" : "libAccountTransaction.a",
 				"role" : "libraries"
 			},
 			{

@@ -6,8 +6,8 @@
 },
 {
   "directory": "/home/syrmia/BankManagementSystem /src/BankManagementSystem/build",
-  "command": "/usr/bin/c++  -I/home/syrmia/BankManagementSystem /src/BankManagementSystem/src/BankManagementSystem/bank_account -g -o CMakeFiles/AccountTranslation.dir/AccountTranslation.o -c /home/syrmia/BankManagementSystem /src/BankManagementSystem/AccountTranslation.cpp",
-  "file": "/home/syrmia/BankManagementSystem /src/BankManagementSystem/AccountTranslation.cpp"
+  "command": "/usr/bin/c++  -I/home/syrmia/BankManagementSystem /src/BankManagementSystem/src/BankManagementSystem/bank_account -g -o CMakeFiles/AccountTransaction.dir/AccountTransaction.o -c /home/syrmia/BankManagementSystem /src/BankManagementSystem/AccountTransaction.cpp",
+  "file": "/home/syrmia/BankManagementSystem /src/BankManagementSystem/AccountTransaction.cpp"
 },
 {
   "directory": "/home/syrmia/BankManagementSystem /src/BankManagementSystem/build",
