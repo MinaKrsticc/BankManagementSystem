@@ -62,7 +62,7 @@ namespace bank_account
             }
             else
             {
-                cout << "Credit Card:  Ne mozete podici taj iznos" << endl;
+                cout << "Credit Card: Ne mozete podici taj iznos" << endl;
             }
         }
         else if (this->allowedMinus >= (amountMoney - this->availableFunds))
@@ -71,7 +71,7 @@ namespace bank_account
         }
         else
         {
-            cout << "Credit Card:  Nije dozvoljen toliki minus" << endl;
+            cout << "Credit Card: Nije dozvoljen toliki minus" << endl;
         }
         return this->availableFunds;
     }

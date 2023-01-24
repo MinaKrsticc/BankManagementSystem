@@ -7,18 +7,17 @@
 using namespace std;
 using namespace bank_account;
 
-class AccountTranslation
+class AccountTransaction
 {
 public:
-    AccountTranslation();
-    ~AccountTranslation();
+    AccountTransaction();
+    ~AccountTransaction();
 
-        string name;
-        string adress;
-        float availableFunds;
-        float amountMoney;
-        Date apdateDateTime;
+    string name;
+    string adress;
+    float availableFunds;
+    float amountMoney;
+    Date apdateDateTime;
 
 private:
-
 };

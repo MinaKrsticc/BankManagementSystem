@@ -12,12 +12,10 @@
 using namespace std;
 using namespace bank_account;
 
-AccountTranslation::AccountTranslation()
-{
+AccountTransaction::AccountTransaction(){
 
 };
 
-AccountTranslation::~AccountTranslation()
-{
-    
+AccountTransaction::~AccountTransaction(){
+
 };

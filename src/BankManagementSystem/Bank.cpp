@@ -28,22 +28,22 @@ Bank::~Bank()
     }
 }
 
-void Bank::OpenAccount(Account &acc)
+void Bank::OpenAccount(Account &accountOpen)
 {
-    Account *accountNew = &acc;
+    Account *accountNew = &accountOpen;
     this->accounts.push_back(accountNew);
 }
 
-void Bank::CloseAccount(Account &acc)
+void Bank::CloseAccount(Account &accountClose)
 {
     int len = this->accounts.size();
     int i = 0;
-    while (this->accounts[i] != &acc || len < i)
+    while (this->accounts[i] != &accountClose || len < i)
     {
         i++;
     }
 
-    if (this->accounts[i] == &acc)
+    if (this->accounts[i] == &accountClose)
     {
         this->accounts.erase(this->accounts.begin() + i);
     }
@@ -192,62 +192,62 @@ void Bank::SortAndPrintForName()
     cout << endl;
 }
 
-void Bank::AccountDeposit(float amound, Account &acc)
+void Bank::AccountDeposit(float amound, Account &account)
 {
-    AccountTranslation *accTranslation = new AccountTranslation;
+    AccountTransaction *accTransaction = new AccountTransaction;
     int len = this->accounts.size();
     for(int j = 0; j < len; j++)
     {
-        if ((typeid(*this->accounts[j]) == typeid(acc)))
+        if ((typeid(*this->accounts[j]) == typeid(account)))
         {
-            if(this->accounts[j]->availableFunds == acc.availableFunds && this->accounts[j]->adress.compare(acc.adress) == 0 && this->accounts[j]->name.compare(acc.name) == 0
-            && this->accounts[j]->createDateTime.days == acc.createDateTime.days && this->accounts[j]->createDateTime.month == acc.createDateTime.month && this->accounts[j]->createDateTime.year == acc.createDateTime.year)
+            if(this->accounts[j]->availableFunds == account.availableFunds && this->accounts[j]->adress.compare(account.adress) == 0 && this->accounts[j]->name.compare(account.name) == 0
+            && this->accounts[j]->createDateTime.days == account.createDateTime.days && this->accounts[j]->createDateTime.month == account.createDateTime.month && this->accounts[j]->createDateTime.year == account.createDateTime.year)
             {
-                accTranslation->name = this->accounts[j]->name;
-                accTranslation->adress = this->accounts[j]->adress;
+                accTransaction->name = this->accounts[j]->name;
+                accTransaction->adress = this->accounts[j]->adress;
 
-                accTranslation->amountMoney = amound;
-                accTranslation->availableFunds = this->accounts[j]->Deposit(amound);
+                accTransaction->amountMoney = amound;
+                accTransaction->availableFunds = this->accounts[j]->Deposit(amound);
 
                 time_t ttime = time(0);
                 tm *local_time = localtime(&ttime);
-                accTranslation->apdateDateTime.year  = 1900 + local_time->tm_year;
-                accTranslation->apdateDateTime.month  = 1 + local_time->tm_mon;
-                accTranslation->apdateDateTime.days = local_time->tm_mday;
+                accTransaction->apdateDateTime.year  = 1900 + local_time->tm_year;
+                accTransaction->apdateDateTime.month  = 1 + local_time->tm_mon;
+                accTransaction->apdateDateTime.days = local_time->tm_mday;
 
-                this->accountTranslation.push_back(accTranslation);
+                this->accountTransaction.push_back(accTransaction);
             }
         } 
     }
 }
 
-void Bank::AccountWithdraw(float amound, Account &acc)
+void Bank::AccountWithdraw(float amound, Account &account)
 {
-    AccountTranslation *accTranslation = new AccountTranslation;
+    AccountTransaction *accTransaction = new AccountTransaction;
     int len = this->accounts.size();
     for(int j = 0; j < len; j++)
     {
-        if ((typeid(*this->accounts[j]) == typeid(acc)))
+        if ((typeid(*this->accounts[j]) == typeid(account)))
         {
-            if(this->accounts[j]->availableFunds == acc.availableFunds && this->accounts[j]->adress.compare(acc.adress) == 0 && this->accounts[j]->name.compare(acc.name) == 0
-            && this->accounts[j]->createDateTime.days == acc.createDateTime.days && this->accounts[j]->createDateTime.month == acc.createDateTime.month && this->accounts[j]->createDateTime.year == acc.createDateTime.year)
+            if(this->accounts[j]->availableFunds == account.availableFunds && this->accounts[j]->adress.compare(account.adress) == 0 && this->accounts[j]->name.compare(account.name) == 0
+            && this->accounts[j]->createDateTime.days == account.createDateTime.days && this->accounts[j]->createDateTime.month == account.createDateTime.month && this->accounts[j]->createDateTime.year == account.createDateTime.year)
             {
-                accTranslation->name = this->accounts[j]->name;
-                accTranslation->adress = this->accounts[j]->adress;
+                accTransaction->name = this->accounts[j]->name;
+                accTransaction->adress = this->accounts[j]->adress;
                 // accTranslation->apdateDateTime.days = this->accounts[j]->dateTransaction.days;
                 // accTranslation->apdateDateTime.month = this->accounts[j]->dateTransaction.month;
                 // accTranslation->apdateDateTime.year = this->accounts[j]->dateTransaction.year;
 
                 time_t ttime = time(0);
                 tm *local_time = localtime(&ttime);
-                accTranslation->apdateDateTime.year  = 1900 + local_time->tm_year;
-                accTranslation->apdateDateTime.month  = 1 + local_time->tm_mon;
-                accTranslation->apdateDateTime.days = local_time->tm_mday;
+                accTransaction->apdateDateTime.year  = 1900 + local_time->tm_year;
+                accTransaction->apdateDateTime.month  = 1 + local_time->tm_mon;
+                accTransaction->apdateDateTime.days = local_time->tm_mday;
 
-                accTranslation->amountMoney = amound;
-                accTranslation->availableFunds = this->accounts[j]->Withdraw(amound);
+                accTransaction->amountMoney = amound;
+                accTransaction->availableFunds = this->accounts[j]->Withdraw(amound);
 
-                this->accountTranslation.push_back(accTranslation);
+                this->accountTransaction.push_back(accTransaction);
             }
         } 
     }
@@ -255,7 +255,7 @@ void Bank::AccountWithdraw(float amound, Account &acc)
 
 void Bank::PrintTranslation()
 {
-    int lenNewAcc = this->accountTranslation.size();
+    int lenNewAcc = this->accountTransaction.size();
     for (int i = 0; i < lenNewAcc; i++)
     {
         if ((typeid(*this->accounts[i]) == typeid(CurrentAccount)))
@@ -275,9 +275,9 @@ void Bank::PrintTranslation()
             cout<<"TrustAccount"<<endl;
         }
 
-        cout << "Podigao je korisnik: "<< this->accountTranslation[i]->name
-        <<"  datuma: " <<this->accountTranslation[i]->apdateDateTime.days<<". "<<this->accountTranslation[i]->apdateDateTime.month<<". "<<this->accountTranslation[i]->apdateDateTime.year<<"  "
-        <<" iznos: "<<this->accountTranslation[i]->amountMoney <<"  trenutno stanje na racunu: " << this->accountTranslation[i]->availableFunds<<endl;
+        cout << "Podigao je korisnik: "<< this->accountTransaction[i]->name
+        <<"  datuma: " <<this->accountTransaction[i]->apdateDateTime.days<<". "<<this->accountTransaction[i]->apdateDateTime.month<<". "<<this->accountTransaction[i]->apdateDateTime.year<<"  "
+        <<" iznos: "<<this->accountTransaction[i]->amountMoney <<"  trenutno stanje na racunu: " << this->accountTransaction[i]->availableFunds<<endl;
         cout<<endl;
     }
 }

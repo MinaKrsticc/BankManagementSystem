@@ -69,7 +69,7 @@ int main()
     banka.SortAndPrintForAmount();
     banka.SortAndPrintForDate();
     banka.SortAndPrintForName();
- 
+
     banka.PrintTranslation();
 
     // CurrentAccount curAcca(datumm, adresa, ime, 10000.0, 15000);

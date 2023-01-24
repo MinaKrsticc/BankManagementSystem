@@ -8,7 +8,7 @@ namespace bank_account
     {
     public:
         // int countWithdrawals; // brojac koliko puta smo podigli novac
-        static const int maxWithdrawals = 3; 
+        static const int maxWithdrawals = 3;
         float minimumFunds;
 
     public:
