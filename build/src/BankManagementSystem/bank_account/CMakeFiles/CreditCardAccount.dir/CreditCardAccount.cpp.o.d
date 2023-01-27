@@ -147,4 +147,8 @@ src/BankManagementSystem/bank_account/CMakeFiles/CreditCardAccount.dir/CreditCar
  /usr/include/c++/9/bits/locale_facets.tcc \
  /usr/include/c++/9/bits/basic_ios.tcc \
  /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/istream \
- /usr/include/c++/9/bits/istream.tcc
+ /usr/include/c++/9/bits/istream.tcc \
+ /home/syrmia/BankManagementSystem /src/BankManagementSystem/bank_account/Date.h \
+ /home/syrmia/BankManagementSystem /src/BankManagementSystem/bank_account/../Bank.h \
+ /home/syrmia/BankManagementSystem /src/BankManagementSystem/bank_account/../AccountTransaction.h \
+ /usr/include/c++/9/ctime

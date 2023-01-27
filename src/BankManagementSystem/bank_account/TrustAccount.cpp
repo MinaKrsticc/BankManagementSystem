@@ -44,7 +44,7 @@ namespace bank_account
 
     float TrustAccount::Withdraw(float amountMoney)
     {
-        if(this->availableFunds >= amountMoney)
+        if (this->availableFunds >= amountMoney)
         {
             float remainingFounds = this->availableFunds - amountMoney;
 
@@ -57,17 +57,17 @@ namespace bank_account
                 }
                 else
                 {
-                    cout<<"TrustAccount:  Podigli ste vec "<< this->maxWithdrawals <<"puta "<<endl;
+                    cout << "TrustAccount: You raised already " << this->maxWithdrawals << "times " << endl;                
                 }
             }
             else
             {
-                cout<< "TrustAccount:  Ne mozete podici novac, zato sto imate minimalna sredstva koja moraju biti na racunu" <<endl;
+                cout << "TrustAccount:  You cannot withdraw money, because you have minimum funds that must be in the account" << endl;
             }
         }
         else
         {
-            cout << "TrustAccount:  Ne mozete podici sredstva, nemate dovoljno" << endl;
+            cout << "TrustAccount: You can't withdraw money, you don't have enough" << endl;
         }
 
         return this->availableFunds;
@@ -75,24 +75,24 @@ namespace bank_account
 
     void TrustAccount::Print()
     {
-        cout << this->name <<endl;
-        cout << this->adress <<endl;
-        cout << this->availableFunds<<endl;
-        cout << "countWithdrawals  "<< this->countWithdrawals<<endl;
-        cout<< this->createDateTime.days << ". " << this->createDateTime.month << ". " << this->createDateTime.year << endl;
-        cout<< "TrustAccount" <<endl;
+        cout << this->name << endl;
+        cout << this->adress << endl;
+        cout << this->availableFunds << endl;
+        cout << "count withdrawals  " << this->countWithdrawals << endl;
+        cout << this->createDateTime.days << ". " << this->createDateTime.month << ". " << this->createDateTime.year << endl;
+        cout << "TrustAccount" << endl;
     }
 
-    bool TrustAccount::FundsAvailableOnAccount(float amound)
+    bool TrustAccount::FundsAvailableOnAccount(float amount)
     {
-       if(this->availableFunds >= amound)
-       {
+        if (this->availableFunds >= amount)
+        {
             return true;
-       } 
-       else
-       {
+        }
+        else
+        {
             return false;
-       }
+        }
     }
 
     bool TrustAccount::AvailableMinusOnAccount()
@@ -111,4 +111,13 @@ namespace bank_account
             return false;
         }
     }
+
+    // void TrustAccount::TimeTransaction()
+    // {
+    //     time_t ttime = time(0);
+    //     tm *local_time = localtime(&ttime);
+    //     this->dateTransaction.year = 1900 + local_time->tm_year;
+    //     this->dateTransaction.month = 1 + local_time->tm_mon;
+    //     this->dateTransaction.days = local_time->tm_mday;
+    // }
 }

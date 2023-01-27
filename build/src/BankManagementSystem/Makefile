@@ -141,6 +141,20 @@ main/fast:
 .PHONY : main/fast
 
 # Convenience name for target.
+src/BankManagementSystem/CMakeFiles/AccountTransaction.dir/rule:
+	cd /home/syrmia/BankManagementSystem /build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/BankManagementSystem/CMakeFiles/AccountTransaction.dir/rule
+.PHONY : src/BankManagementSystem/CMakeFiles/AccountTransaction.dir/rule
+
+# Convenience name for target.
+AccountTransaction: src/BankManagementSystem/CMakeFiles/AccountTransaction.dir/rule
+.PHONY : AccountTransaction
+
+# fast build rule for target.
+AccountTransaction/fast:
+	cd /home/syrmia/BankManagementSystem /build && $(MAKE) $(MAKESILENT) -f src/BankManagementSystem/CMakeFiles/AccountTransaction.dir/build.make src/BankManagementSystem/CMakeFiles/AccountTransaction.dir/build
+.PHONY : AccountTransaction/fast
+
+# Convenience name for target.
 src/BankManagementSystem/CMakeFiles/Bank.dir/rule:
 	cd /home/syrmia/BankManagementSystem /build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/BankManagementSystem/CMakeFiles/Bank.dir/rule
 .PHONY : src/BankManagementSystem/CMakeFiles/Bank.dir/rule
@@ -153,6 +167,30 @@ Bank: src/BankManagementSystem/CMakeFiles/Bank.dir/rule
 Bank/fast:
 	cd /home/syrmia/BankManagementSystem /build && $(MAKE) $(MAKESILENT) -f src/BankManagementSystem/CMakeFiles/Bank.dir/build.make src/BankManagementSystem/CMakeFiles/Bank.dir/build
 .PHONY : Bank/fast
+
+AccountTransaction.o: AccountTransaction.cpp.o
+.PHONY : AccountTransaction.o
+
+# target to build an object file
+AccountTransaction.cpp.o:
+	cd /home/syrmia/BankManagementSystem /build && $(MAKE) $(MAKESILENT) -f src/BankManagementSystem/CMakeFiles/AccountTransaction.dir/build.make src/BankManagementSystem/CMakeFiles/AccountTransaction.dir/AccountTransaction.cpp.o
+.PHONY : AccountTransaction.cpp.o
+
+AccountTransaction.i: AccountTransaction.cpp.i
+.PHONY : AccountTransaction.i
+
+# target to preprocess a source file
+AccountTransaction.cpp.i:
+	cd /home/syrmia/BankManagementSystem /build && $(MAKE) $(MAKESILENT) -f src/BankManagementSystem/CMakeFiles/AccountTransaction.dir/build.make src/BankManagementSystem/CMakeFiles/AccountTransaction.dir/AccountTransaction.cpp.i
+.PHONY : AccountTransaction.cpp.i
+
+AccountTransaction.s: AccountTransaction.cpp.s
+.PHONY : AccountTransaction.s
+
+# target to generate assembly for a file
+AccountTransaction.cpp.s:
+	cd /home/syrmia/BankManagementSystem /build && $(MAKE) $(MAKESILENT) -f src/BankManagementSystem/CMakeFiles/AccountTransaction.dir/build.make src/BankManagementSystem/CMakeFiles/AccountTransaction.dir/AccountTransaction.cpp.s
+.PHONY : AccountTransaction.cpp.s
 
 Bank.o: Bank.cpp.o
 .PHONY : Bank.o
@@ -211,8 +249,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... AccountTransaction"
 	@echo "... Bank"
 	@echo "... main"
+	@echo "... AccountTransaction.o"
+	@echo "... AccountTransaction.i"
+	@echo "... AccountTransaction.s"
 	@echo "... Bank.o"
 	@echo "... Bank.i"
 	@echo "... Bank.s"

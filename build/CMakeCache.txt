@@ -14,6 +14,9 @@
 # EXTERNAL cache entries
 ########################
 
+//Dependencies for the target
+AccountTransaction_LIB_DEPENDS:STATIC=general;Bank;general;CreditCardAccount;general;CurrentAccount;general;SavingsAccount;general;TrustAccount;
+
 //Build the testing tree.
 BUILD_TESTING:BOOL=ON
 

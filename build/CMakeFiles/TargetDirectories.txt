@@ -8,6 +8,7 @@
 /home/syrmia/BankManagementSystem /build/src/BankManagementSystem/CMakeFiles/edit_cache.dir
 /home/syrmia/BankManagementSystem /build/src/BankManagementSystem/CMakeFiles/test.dir
 /home/syrmia/BankManagementSystem /build/src/BankManagementSystem/CMakeFiles/main.dir
+/home/syrmia/BankManagementSystem /build/src/BankManagementSystem/CMakeFiles/AccountTransaction.dir
 /home/syrmia/BankManagementSystem /build/src/BankManagementSystem/CMakeFiles/Bank.dir
 /home/syrmia/BankManagementSystem /build/src/BankManagementSystem/bank_account/CMakeFiles/edit_cache.dir
 /home/syrmia/BankManagementSystem /build/src/BankManagementSystem/bank_account/CMakeFiles/test.dir

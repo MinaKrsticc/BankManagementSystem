@@ -45,8 +45,8 @@ namespace bank_account
         cout << this->name << endl;
         cout << this->adress << endl;
         cout << this->availableFunds << endl;
-        cout << "countWithdrawals  " << this->countWithdrawals << endl;
-        cout << "SavingAccount:  Kamata je  " << this->interestRate << endl;
+        cout << "Count withdrawals  " << this->countWithdrawals << endl;
+        cout << "Interest is  " << this->interestRate << endl;
         cout << this->createDateTime.days << ". " << this->createDateTime.month << ". " << this->createDateTime.year << endl;
         cout << "SavingAccount" << endl;
     }
@@ -69,29 +69,28 @@ namespace bank_account
                 {
                     this->countWithdrawals++;
                     this->availableFunds = remainingFounds;
-
                 }
                 else
                 {
-                    cout << "SavingAccount:  Podigli ste vec " << this->maxWithdrawals << "puta " << endl;
+                    cout << "SavingAccount: You raised already " << this->maxWithdrawals << "times " << endl;
                 }
             }
             else
             {
-                cout << "SavingAccount:  Ne mozete podici novac, zato sto imate minimalna sredstva koja moraju biti na racunu" << endl;
+                cout << "SavingAccount: You cannot withdraw money, because you have minimum funds that must be in the account" << endl;
             }
         }
         else
         {
-            cout << " SavingAccount:  Ne mozete podici sredstva, nemate dovoljno" << endl;
+            cout << " SavingAccount: You cannot withdraw that amount" << endl;
         }
 
         return this->availableFunds;
     }
 
-    bool SavingAccount::FundsAvailableOnAccount(float amound)
+    bool SavingAccount::FundsAvailableOnAccount(float amount)
     {
-        if (this->availableFunds >= amound)
+        if (this->availableFunds >= amount)
         {
             return true;
         }
@@ -117,4 +116,14 @@ namespace bank_account
             return false;
         }
     }
+
+    // void SavingAccount::TimeTransaction()
+    // {
+    //     time_t ttime = time(0);
+    //     tm *local_time = localtime(&ttime);
+    //     this->dateTransaction.year = 1900 + local_time->tm_year;
+    //     this->dateTransaction.month = 1 + local_time->tm_mon;
+    //     this->dateTransaction.days = local_time->tm_mday;
+    // }
+
 }

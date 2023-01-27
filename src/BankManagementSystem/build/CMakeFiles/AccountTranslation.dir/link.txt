@@ -1,2 +1,0 @@
-/usr/bin/ar qc libAccountTranslation.a CMakeFiles/AccountTranslation.dir/AccountTranslation.o
-/usr/bin/ranlib libAccountTranslation.a

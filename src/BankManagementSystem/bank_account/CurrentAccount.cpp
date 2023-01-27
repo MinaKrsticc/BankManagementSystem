@@ -35,6 +35,7 @@ namespace bank_account
     float CurrentAccount::Deposit(float amountMoney)
     {
         this->availableFunds = this->availableFunds + amountMoney;
+
         return this->availableFunds;
     }
 
@@ -48,32 +49,32 @@ namespace bank_account
             }
             else
             {
-                cout<<"Prekoracili ste limit"<<endl;
+                cout << "You have exceeded the limit" << endl;
             }
         }
-        
+
         return this->availableFunds;
     }
 
     void CurrentAccount::Print()
     {
-        cout<< this->name <<endl;
-        cout<< this->adress <<endl;
-        cout<< this->availableFunds <<endl;
-        cout<< this->createDateTime.days << ". " << this->createDateTime.month << ". " << this->createDateTime.year <<endl;
-        cout<< "CurrentAccount" << endl;
+        cout << this->name << endl;
+        cout << this->adress << endl;
+        cout << this->availableFunds << endl;
+        cout << this->createDateTime.days << ". " << this->createDateTime.month << ". " << this->createDateTime.year << endl;
+        cout << "CurrentAccount" << endl;
     }
 
-    bool CurrentAccount::FundsAvailableOnAccount(float amound)
+    bool CurrentAccount::FundsAvailableOnAccount(float amount)
     {
-       if(this->availableFunds >= amound)
-       {
+        if (this->availableFunds >= amount)
+        {
             return true;
-       } 
-       else
-       {
+        }
+        else
+        {
             return false;
-       }
+        }
     }
 
     bool CurrentAccount::AvailableMinusOnAccount()
@@ -92,4 +93,13 @@ namespace bank_account
             return false;
         }
     }
+        
+    // void CurrentAccount::TimeTransaction()
+    // {
+    //     time_t ttime = time(0);
+    //     tm *local_time = localtime(&ttime);
+    //     this->dateTransaction.year = 1900 + local_time->tm_year;
+    //     this->dateTransaction.month = 1 + local_time->tm_mon;
+    //     this->dateTransaction.days = local_time->tm_mday;
+    // }
 }

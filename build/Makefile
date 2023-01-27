@@ -140,6 +140,19 @@ main/fast:
 .PHONY : main/fast
 
 #=============================================================================
+# Target rules for targets named AccountTransaction
+
+# Build rule for target.
+AccountTransaction: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 AccountTransaction
+.PHONY : AccountTransaction
+
+# fast build rule for target.
+AccountTransaction/fast:
+	$(MAKE) $(MAKESILENT) -f src/BankManagementSystem/CMakeFiles/AccountTransaction.dir/build.make src/BankManagementSystem/CMakeFiles/AccountTransaction.dir/build
+.PHONY : AccountTransaction/fast
+
+#=============================================================================
 # Target rules for targets named Bank
 
 # Build rule for target.
@@ -213,6 +226,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... AccountTransaction"
 	@echo "... Bank"
 	@echo "... CreditCardAccount"
 	@echo "... CurrentAccount"

@@ -8,7 +8,7 @@ namespace bank_account
     class SavingAccount : public Account
     {
     public:
-        float interestRate;   // kamatna stopa koja se dodaje prilikom placivanja novca
+        float interestRate; // kamatna stopa koja se dodaje prilikom placivanja novca
         // int countWithdrawals; // brojac koliko puta smo podigli novac
         static const int maxWithdrawals = 3;
         float minimumFunds; // minimalni iznos koji mora da ostane na kartici
@@ -20,7 +20,8 @@ namespace bank_account
         float Deposit(float amountMoney) override;
         float Withdraw(float amountMoney) override;
         void Print() override;
-        bool FundsAvailableOnAccount(float amound) override;
+        // void TimeTransaction() override;
+        bool FundsAvailableOnAccount(float amount) override;
         bool AvailableMinusOnAccount() override;
         bool AvaibleForWithdrawOnAccount() override;
     };

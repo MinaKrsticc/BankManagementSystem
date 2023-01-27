@@ -17,8 +17,9 @@ namespace bank_account
         float Deposit(float amountMoney) override;
         float Withdraw(float amountMoney) override;
         void Print() override;
+        // void TimeTransaction() override;
         TrustAccount(Date creationDate, string nameUser, string adressUser, float amountMoney);
-        bool FundsAvailableOnAccount(float amound) override;
+        bool FundsAvailableOnAccount(float amount) override;
         bool AvailableMinusOnAccount() override;
         bool AvaibleForWithdrawOnAccount() override;
     };

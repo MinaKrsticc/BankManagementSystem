@@ -97,6 +97,8 @@ main_EXTERNAL_OBJECTS =
 ../bin/main: ../lib/libSavingsAccount.a
 ../bin/main: ../lib/libTrustAccount.a
 ../bin/main: ../lib/libBank.a
+../bin/main: ../lib/libAccountTransaction.a
+../bin/main: ../lib/libBank.a
 ../bin/main: ../lib/libCurrentAccount.a
 ../bin/main: ../lib/libCreditCardAccount.a
 ../bin/main: ../lib/libSavingsAccount.a

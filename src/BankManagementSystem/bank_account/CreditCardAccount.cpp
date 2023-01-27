@@ -47,6 +47,7 @@ namespace bank_account
     float CreditCardAccount::Deposit(float amountMoney)
     {
         this->availableFunds = this->availableFunds + amountMoney;
+        this->dateTransaction.TimeTransaction();
         return this->availableFunds;
     }
 
@@ -62,7 +63,7 @@ namespace bank_account
             }
             else
             {
-                cout << "Credit Card: Ne mozete podici taj iznos" << endl;
+                cout << "Credit Card: You cannot withdraw that amount" << endl;
             }
         }
         else if (this->allowedMinus >= (amountMoney - this->availableFunds))
@@ -76,9 +77,9 @@ namespace bank_account
         return this->availableFunds;
     }
 
-    bool CreditCardAccount::FundsAvailableOnAccount(float amound)
+    bool CreditCardAccount::FundsAvailableOnAccount(float amount)
     {
-       if(this->availableFunds >= amound)
+       if(this->availableFunds >= amount)
        {
             return true;
        } 
@@ -111,4 +112,14 @@ namespace bank_account
             return false;
         }
     }
+    
+    // void bank_account::Date::TimeTransaction()
+    // {
+    //     time_t ttime = time(0);
+    //     tm *local_time = localtime(&ttime);
+    //     //bank_account::Date::year
+    //     bank_account::CreditCardAccount::dateTransaction.year = 1900 + local_time->tm_year;
+    //     bank_account::Date::month = 1 + local_time->tm_mon;
+    //     bank_account::Date::days = local_time->tm_mday;
+    // }
 }

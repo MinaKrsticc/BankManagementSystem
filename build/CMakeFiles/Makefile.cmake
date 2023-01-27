@@ -50,6 +50,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "src/BankManagementSystem/CMakeFiles/main.dir/DependInfo.cmake"
+  "src/BankManagementSystem/CMakeFiles/AccountTransaction.dir/DependInfo.cmake"
   "src/BankManagementSystem/CMakeFiles/Bank.dir/DependInfo.cmake"
   "src/BankManagementSystem/bank_account/CMakeFiles/TrustAccount.dir/DependInfo.cmake"
   "src/BankManagementSystem/bank_account/CMakeFiles/SavingsAccount.dir/DependInfo.cmake"

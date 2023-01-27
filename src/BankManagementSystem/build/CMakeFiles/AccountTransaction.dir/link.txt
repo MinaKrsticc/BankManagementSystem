@@ -1,2 +1,0 @@
-/usr/bin/ar qc libAccountTransaction.a CMakeFiles/AccountTransaction.dir/AccountTransaction.o
-/usr/bin/ranlib libAccountTransaction.a
