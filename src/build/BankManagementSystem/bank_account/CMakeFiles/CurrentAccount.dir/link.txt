@@ -1,0 +1,2 @@
+/usr/bin/ar qc libCurrentAccount.a CMakeFiles/CurrentAccount.dir/CurrentAccount.o
+/usr/bin/ranlib libCurrentAccount.a

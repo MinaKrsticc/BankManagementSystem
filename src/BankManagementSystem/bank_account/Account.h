@@ -15,7 +15,6 @@ namespace bank_account
         Date createDateTime;
         Date dateTransaction;
         int countWithdrawals = 0; // brojac koliko puta smo podigli novac
-
         
     public:
         virtual float Deposit(float amountMoney) = 0;
