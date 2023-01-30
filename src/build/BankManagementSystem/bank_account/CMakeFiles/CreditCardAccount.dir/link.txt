@@ -1,2 +1,0 @@
-/usr/bin/ar qc libCreditCardAccount.a CMakeFiles/CreditCardAccount.dir/CreditCardAccount.o
-/usr/bin/ranlib libCreditCardAccount.a

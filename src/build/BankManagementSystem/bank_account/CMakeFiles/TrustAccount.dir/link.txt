@@ -1,2 +1,0 @@
-/usr/bin/ar qc libTrustAccount.a CMakeFiles/TrustAccount.dir/TrustAccount.o
-/usr/bin/ranlib libTrustAccount.a
