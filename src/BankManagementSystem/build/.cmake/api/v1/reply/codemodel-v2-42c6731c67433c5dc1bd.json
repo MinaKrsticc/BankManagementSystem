@@ -1,0 +1,123 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						6
+					]
+				},
+				{
+					"build" : "bank_account",
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "bank_account",
+					"targetIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "Project",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "AccountTransaction::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-AccountTransaction-Debug-adbff28abfc49d1cf61c.json",
+					"name" : "AccountTransaction",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Bank::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Bank-Debug-7a2018539bc0eaf13004.json",
+					"name" : "Bank",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "CreditCardAccount::@d73c3b4dc4429be0b0b5",
+					"jsonFile" : "target-CreditCardAccount-Debug-e7f734aca2514932cb7a.json",
+					"name" : "CreditCardAccount",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "CurrentAccount::@d73c3b4dc4429be0b0b5",
+					"jsonFile" : "target-CurrentAccount-Debug-cedeb52f3ed48362e3fa.json",
+					"name" : "CurrentAccount",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "SavingsAccount::@d73c3b4dc4429be0b0b5",
+					"jsonFile" : "target-SavingsAccount-Debug-c3bf470980bba54531fe.json",
+					"name" : "SavingsAccount",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "TrustAccount::@d73c3b4dc4429be0b0b5",
+					"jsonFile" : "target-TrustAccount-Debug-ef7c541a82c9f1154361.json",
+					"name" : "TrustAccount",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main-Debug-5d48b2477517167b486f.json",
+					"name" : "main",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/syrmia/BankManagementSystem /src/BankManagementSystem/build",
+		"source" : "/home/syrmia/BankManagementSystem /src/BankManagementSystem"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 2
+	}
+}

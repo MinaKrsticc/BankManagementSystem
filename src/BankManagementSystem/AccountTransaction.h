@@ -7,7 +7,8 @@ using namespace bank_account;
 class AccountTransaction
 {
 public:
-    Account *accountTransaction;
+
+    static Account *accountTransaction;
     Date dateTransaction;
     float amountMoney;
     bool transactionIdentifierDeposit;
